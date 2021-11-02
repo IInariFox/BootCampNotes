@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoppingCart</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script><!--underscore-->
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="my-4 title">Shopping Cart</h1>
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Item(s) w/tax</th>
+              <th scope="col">Add/Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name">Controller</td>
+              <td class="unit"><input type="number" placeholder="Insert Price" /></td>
+              <td class="num"><input type="number" placeholder="Quantity"/>$</td>
+              <td class="subT"></td>
+              <td><button class="btn btn-danger btn-sm remove">remove</button></td>
+            </tr>
+            <tr>
+              <td class="name">Headphones</td>
+              <td class="unit"><input type="number" placeholder="Insert Price" /></td>
+              <td class="num"><input type="number" placeholder="Quantity" />$</td>
+              <td class="subT">$</td>
+              <td><button class="btn btn-danger btn-sm remove">remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <form class="col-12 mt-2 mb-4" id="addItem">
+        <input class="mx-2" name="name" type="text" placeholder="Item Name" required/>
+        <input class="mx-2" name="unit" type="number" placeholder="Price"/>
+        <input class="mx-2" name="num" type="number" placeholder="Unit Count"/>
+        <button class="btn btn-primary btn-sm">add</button>
+      </form>
+      <div class="col-12 col-md-6">
+        <h3>Subtotal: $ <span id="totalValue"></span></h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
