@@ -2,9 +2,8 @@ var calculateSub = function (ele) {
   var unitPrice = parseFloat($(ele).find('.unit input').val());
   var numUnit = parseFloat($(ele).find('.num input').val());
 
-  var tax = unitPrice * numUnit * 0.10;
-  var subT = unitPrice * numUnit + tax;
-  $(ele).children('.subT').html(Math.floor((subT)));
+  var subT = unitPrice * numUnit;
+  $(ele).children('.subT').html(subT);
 
   return subT;
 }
