@@ -1,0 +1,43 @@
+<!-- To load basic HTML template, type "!" as the first text, then click on the first recommended option  -->
+<!DOCTYPE html> <!-- Tells the browser that the rest of the file is HTML -->
+<html lang="en"> <!-- (Not necessary) but helps Google understand the target demographic -->
+<head> 
+    <h1 class="hName">
+         The Page Header will have the same font-size and color as the aName
+     </h1>
+    <meta charset="utf-8"> <!-- character sets are libraries of human language characters - **put this in everything** -->
+    <link rel="stylesheet" type="text/css" href="Introduction to HTML and CSS.CSS"/><!-- **************Combining seperate files of HTML and CSS, we need to insert it into the head********************************************* -->
+    <!--link: is a self closing tag -  rel: is a relationship and is required in link tags - type: specifies the media type of the linked document which is text/css-->
+    <title> Introduction To HTML and CSS Notes I </title>
+</head>
+<body style="background-color: green;"> 
+    <style> 
+        p{
+            color:red; 
+        }
+    </style>
+    <!-- This is one way to write CSS within an HTML file, but we need the style tag -->
+
+    <!--ID selector: add to element tags, only allowed one element per ID-->
+    <p id="pageID" > This will be inserted as text under the pageID indentification </p>
+    <p class="someName">
+        This text will be customized
+    </p>
+    <p class="aName">
+        This have the same font, font-size and color as the header
+    </p>
+    <!-- ***************To access LiveWebPage, it will be at the bottom right corner "Go Live" or right click on the page and it should show up ****************-->
+    <table border="1">
+        <tr>
+            <td bgcolor="White"> Name </td>
+            <td bgcolor="white"> Occuptation </td>
+            <td bgcolor="white"> Suffix </td>
+        </tr>
+        <tr>
+            <td><input id="typeName" type="text" placeholder="John Smith"/></td>
+            <td><input id="typeOc" type="text" placeholder="Engineer"/></td>
+            <td><input id="typeSuf" type="text" placeholder="Mr."/></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Positioning Chapter Notes</title>
+  <link rel="stylesheet" type="text/css" href="positioningNotes.css">
+</head>
+<body style="background-color: rgb(50, 14, 90)">
+  <h1 id="titleName">Positioning Chapter Notes</h1>
+  <!--
+    Box model -> 
+    Outmost: margin(trasnparent)
+    Intra(next):border
+    Inter(middle): padding
+    inner(content): the stuff we input
+  -->
+  <div class="boxmodelOne">
+    <p>Margin -> Border -> Padding -> Content</p>
+  </div>
+
+  <div class="boxmodelTwo">
+    <p>Seperation of spacing between the two content blocks</p>
+  </div>
+
+  <div class="longHand">
+    <p>Lonhand is used for clarity of code</p>
+  </div>
+
+  <div class="posFloat">
+    <p id="headerP">We are using floats now to position the blocks</p>
+    <section class="secOne">First section</section>
+    <section class="secTwo">Second section</section>
+    <footer>Last footer</footer>
+  </div>
+
+  <br/>
+
+  <div class="clearFix">
+    <section id="cfsecOne">First Content</section>
+    <section id="cfsecTwo">Second Content</section>
+  </div>
+
+  <div id="divInline">
+    <header>Header</header>
+    <section>Section One</section> <!--all four blocks do not align in one line--> <!--look as css-->
+    <section>Section Two</section>
+    <section>Section Three</section>
+    <section>Section Four</section>
+    <footer>Footer</footer>
+  </div>
+
+  <br/>
+
+  <div>
+    <header>Header</header>
+    <section class="bigSec">Section One</section>
+    <section class="lilSec">Section Two</section>
+    <footer>Footer</footer>
+  </div>
+
+  <div id="inlineGrid">
+    <header>Header</header>
+    <section class="totalGrid">Section Parent</section>
+    <section class="gridC">Section One</section> 
+    <section class="gridC">Section Two</section>
+    <section class="gridC">Section Three</section>
+    <section class="gridC">Section Four</section>
+    <footer>Footer</footer>
+  </div>
+
+  <br/>
+
+  <div id="positionParent">
+    Parent
+    <div class="firstChild child">One</div>
+    <div class="secondChild child">Two</div>
+    <div class="thirdChild child">Three</div>
+    <div class="fourthChild child">Four</div>
+  </div>
+
+  <style>
+    .container {
+        margin: 10px;
+        width: 115px;
+        height: 115px;
+        line-height: 115px;
+        text-align: center;
+        background-image: url("http://i.imgur.com/H9lpVkZ.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    
+    }
+    
+    </style>
+    
+    <div class='container'>
+    </div>
+    
+    <div class='container' style='width:50px;height:100px;line-height:100px'>
+    </div>
+    
+    <div class='container' style='width:140px;height:70px;line-height:70px'>
+    </div>
+</body>
+</html>

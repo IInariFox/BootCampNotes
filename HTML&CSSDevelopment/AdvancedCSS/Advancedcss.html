@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS Notes</title>
+  <link rel="stylesheet" type="text/css" href="Advancedcss.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body style="background-color:rgb(46, 4, 46)">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h1 id="title-color">Advanced CSS Notes</h1>
+  
+  <div class="container">
+    <div class="child1">First Child</div>
+    <div class="child2">Second Child</div>
+    <div class="child3">Third Child</div>
+    <div class="child4">Fourth Child</div>
+    <div class="child5">Fifth Child</div>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <div id="container">
+    <div id="child1">Div 1 z-index: 5
+      <div id="grandchild1">Grandchild 1 z-index: -1</div>
+    </div>
+    <div id="child2">Div 2 z-index: 4</div>
+    <div id="child3">Div 3 z-index: 3</div>
+    <div id="child4">Div 4 z-index: 2</div>
+    <div id="child5">Div 5 z-index: 1</div>
+  </div>
+  <br/>
+  <br/>
+  
+  <div class="one1">First Child
+    <div class="grandchild2">Grandchild 2 z-index: -1</div>
+  </div>
+  <div class="two2">Second Child</div>
+  <div class="three3">Third Child</div>
+  </div>
+  <br/>
+  <br/>
+  <div class="childclass1">Div 1 Opacity 0.3</div>
+  <div class="childclass2">Div 2 Opacity 0.6</div>
+  <div class="childclass3">Div 3 Opacity 0.9</div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="transform-ex">This is a block element</div>
+  <div class="transform-ex2">This is another block element</div>
+
+  <div class="container-parent">
+    <div class="background"></div>
+    <div class="text-info">
+      <h2>We got something cool for you!</h2>
+    </div>
+  </div>
+
+  <br/>
+  <div class="skew-ex1">This block is skewed One1</div>
+  <div class="skew-ex2">This is also skewed Two2</div>
+  <div class="skew-ex3">The third skew Three3</div>
+  <br/>
+
+  <div class="rotate-ex1">This block is rotated One1</div>
+  <div class="rotate-ex2">This is also rotated Two2</div>
+  <div class="rotate-ex3">The third rotation Three3</div>
+  <br/>
+
+  <div class="translate-ex1">Translation example 1</div>
+  <div class="translate-ex2">Translation example 2</div>
+  <div class="translate-ex3">Translation example 3</div>
+
+  <div class="universal">
+    Transform can take many functions
+  </div>
+
+  <br/>
+  <br/>
+  <br/>
+
+  <div class="anime-image">
+    <div class="background-image">
+      <div class="parameters">
+        Hover over for animation
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  <div class="first-ex">
+    The background changes color
+  </div>
+
+  <div class="second-ex">
+    linear
+  </div>
+  <div class="third-ex">
+    ease
+  </div>
+  <div class="fourth-ex">
+    ease-in
+  </div>
+  <div class="fifth-ex">
+    ease-out
+  </div>
+  <div class="sixth-ex">
+    ease-in-out
+  </div>
+  <div class="seventh-ex">
+    cubic-bezier(0,0.6,1,0.9)
+  </div>
+  <div class="eigth-ex">
+    steps(5,start)
+  </div>
+  <div class="ninth-ex">
+    steps(5,end)
+  </div>
+
+  <div class="btn">
+    <button class="press-button">
+      Press Button
+    </button>
+  </div>
+
+  <div class="first-animation">
+    Spinning blue square
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <div class="second-animation">
+    Spinning and rolling around
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <div id="flex-container">
+    <div id="flex-item">1</div>
+    <div id="flex-item">2</div>
+    <div id="flex-item">3</div>
+    <div id="flex-item">4</div>
+    <div id="flex-item">5</div>
+    <div id="flex-item">6</div>
+    <div id="flex-item">7</div>
+    <div id="flex-item">8</div>
+  </div>
+
+  <br/>
+  <div class="flex-container1">
+    <div class="flex-item1"></div>
+  </div>
+
+  <div id="flex-container2">
+    <div id="flex-item2">1</div>
+    <div id="flex-item2">2</div>
+    <div id="flex-item2">3</div>
+    <div id="flex-item2">4</div>
+    <div id="flex-item2">5</div>
+    <div id="flex-item2">6</div>
+    <div id="flex-item2">7</div>
+    <div id="flex-item2">8</div>
+  </div>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Bio</a>
+    <a href="#">Blog</a>
+  </div>
+
+  <div class="flex-container3">
+    <div class="flex-item3" id="item-1"> 1 (2)</div>
+    <div class="flex-item3" id="item-1">2 (1)</div>
+    <div class="flex-item3" id="item-1">3 (0)</div>
+  </div>
+  <div class="flex-container">
+    <div class="flex-item">0</div>
+    <div class="flex-item">0</div>
+    <div class="flex-item">0</div>
+  </div>
+  flex-grow 0,1,0
+  <div class="flex-container">
+    <div class="flex-item">0</div>
+    <div class="flex-item flex-grow-1">1</div>
+    <div class="flex-item">0</div>
+  </div>
+  flex-grow 1,1,1
+  <div class="flex-container">
+    <div class="flex-item flex-grow-1">1</div>
+    <div class="flex-item flex-grow-1">1</div>
+    <div class="flex-item flex-grow-1">1</div>
+  </div>
+  flex-grow 1,2,1
+  <div class="flex-container">
+    <div class="flex-item flex-grow-1">1</div>
+    <div class="flex-item flex-grow-2">2</div>
+    <div class="flex-item flex-grow-1">1</div>
+  </div>
+  flex-grow 1,2,3
+  <div class="flex-container">
+    <div class="flex-item flex-grow-1">1</div>
+    <div class="flex-item flex-grow-2">2</div>
+    <div class="flex-item flex-grow-3">3</div>
+  </div>
+  flex-grow 3,3,3
+  <div class="flex-container">
+    <div class="flex-item flex-grow-3">3</div>
+    <div class="flex-item flex-grow-3">3</div>
+    <div class="flex-item flex-grow-3">3</div>
+  </div>
+  <br/>
+  <div class="flex-container flex-shrink">
+    <div class="flex-item flex-shrink-0">0</div>  <!--this is even |0|0|0|-->
+    <div class="flex-item flex-shrink-0">0</div>
+    <div class="flex-item flex-shrink-0">0</div>
+  </div>
+  <div class="flex-container flex-shrink">
+    <div class="flex-item flex-shrink-0">0</div> <!--this is big small big |  0  |1|  0  |-->
+    <div class="flex-item">1</div>
+    <div class="flex-item flex-shrink-0">0</div>
+  </div>
+  <div class="flex-container flex-shrink">
+    <div class="flex-item">1</div>
+    <div class="flex-item flex-item-2">2</div> <!--this is bigger big bigger |  1  | 2 |  1  |-->
+    <div class="flex-item">1</div>
+  </div>
+  <br/>
+  <div class="flex-container flex-basis-auto"> <!--Flex auto: creates small equal spaces within the boxes are its content-->
+    <div class="flex-item">First</div>
+    <div class="flex-item">Second</div>
+    <div class="flex-item">Third</div>
+  </div>
+  <div class="flex-container flex-basis-0"> <!--flex basis 0: creates even boxes amongst the row and its content -->
+    <div class="flex-item">aa</div>
+    <div class="flex-item">bbbb</div>
+    <div class="flex-item">cccccccc</div>
+  </div>
+  <br/>
+  <div class="flex-container">
+    <div class="flex-item flex-1">1</div>
+    <div class="flex-item flex-2">2</div>
+    <div class="flex-item flex-3">3</div>
+  </div>
+  <div class="flex-container align-items-start">
+    <div class="flex-item">1</div>
+    <div class="flex-item align-self-center">2</div>
+    <div class="flex-item align-self-end">3</div>
+  </div>
+
+  <br/>
+  <div class="content">
+    <div class="image">image</div>
+    <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae exercitationem ea temporibus quisquam tempore dignissimos, placeat dicta tenetur odit ad, mollitia, quam harum fuga. Quisquam voluptatum modi asperiores mollitia? Ipsum!</div>
+  </div>
+  <div class="content right">
+    <div class="image">image</div>
+    <div class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatum molestias, earum facilis ipsam fugit similique. Debitis rem sed consequatur eveniet perferendis eos iusto assumenda, ipsam ea optio adipisci nesciunt!</div>
+  </div>
+  <div class="content">
+    <div class="image">image</div>
+    <div class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, quidem obcaecati. Explicabo, optio iste assumenda fugiat nam neque perferendis dicta, eaque perspiciatis magni dolores doloribus accusamus necessitatibus expedita saepe mollitia.</div>
+  </div>
+  <br/>
+  <!------------------------------------------------------Bootstrap4----------------------------------------------------------->
+  <!--Container: will provide a fixed-width container where its max-width changes at different breakpoints, i.e it may wrap arond onto the next line just like this note-->
+  <!--Container-fluid: will provide fluid-width container where its width is 100% all the time-->
+
+  <!--We can create am edge to edge layout by omitting the container-->
+  <!--*******New Breakpoint: 576px for xs and 1200px for xl*****-->
+  <!--
+    // Extra small devices (portrait phones, less than 576px)
+  // No media query for `xs` since this is the default in Bootstrap
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { ... }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) { ... }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { ... }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { ... }
+  -->
+  <!--Col elements must be immediate children of row elements for bootsraps column structure to work-->
+  <!--
+    <container>
+      <row>
+        <div class="col-12 col-md-xx">
+        <div class="col-12 col-md-xx"
+        <div class="col-12 col-md-xx"
+          <row>
+            <div class="col-12 col-md-xx">
+            <div class="col-12 col-md-xx">
+          <
+      <
+    <
+-->
+
+  <div class="container">
+    <div class="row">  <!--col: will set elements to be like 'flex-grow: 1' or it will grow to take up free space-->
+      <div class="col border p-2">
+        1 of 1
+      </div>                     <!--can be done for self sizing also: col-sm-md-lg-xl-->
+    </div>
+    <div class="row">
+      <div class="col border p-2">
+        1 of 2
+      </div>
+      <div class="col border p-2">2 of 2</div>
+    </div>
+    <div class="row">
+      <div class="col border p-2">
+        1 of 3
+      </div>
+      <div class="col border p-2">
+        2 of 3
+      </div>
+      <div class="col border p-2">
+        3 of 3
+      </div>
+    </div>
+  </div> 
+  <br/>
+  <div class="container">
+    <div class="row">
+      <div class="col border p-2">Col</div> <!--we broke up flexible columns with 'w-100' forcing the element on a new line-->
+      <div class="col border p-2">Col</div>
+      <div class="w-100"></div>
+      <div class="col border p-2">Col</div>
+      <div class="col border p-2">Col</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col border p-2"> 
+        col
+      </div>
+      <div class="col-6 border p-2"> <!--flexed columns: takup whatever space they need-->
+        col-6 (wider)
+      </div>
+      <div class="col border p-2"> <!--where the regular columsn will take what they can get-->
+        col
+      </div>
+    </div>
+    <div class="row">
+      <div class="col border p-2"> 
+        col
+      </div>
+      <div class="col-4 border p-2"> 
+        col-3 (narrower)
+      </div>
+      <div class="col border p-2">
+        col
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-sm border p-2">
+        col-3 col-sm
+      </div>
+      <div class="col-4 col-sm border p-2">
+        col-4 col-sm
+      </div>
+      <div class="col-5 col-sm border p-2">
+        col-5 col-sm
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-2 border p-2">
+        col-2
+      </div>
+      <div class="col-auto border p-2">
+        based on content width because of 'auto'
+      </div>
+      <div class="col-3 border p-2">
+        col-3
+      </div>
+    </div>
+    <div class="row">
+      <div class="col border p-2">
+        col
+      </div>
+      <div class="col-sm-auto border p-2">
+        based on content with from small auto
+      </div>
+      <div class="col border p-2">
+        col
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 border p-2"> <!--up to 12 for full row length-->
+        something?
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 border">col-sm-7</div>
+      <div class="col-sm-5 border">col-sm-5</div> <!--we made something big one end and small on the other-->
+    </div>
+    <div class="row">
+      <div class="col-sm border">col-sm</div> <!--here, we targeted small devices so that they collapse on top for sm screens-->
+      <div class="col-sm border">col-sm</div>
+      <div class="col-sm border">col-sm</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-7 border">col-sm-7</div>
+      <div class="col-12 col-sm-5 border">col-sm-5</div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm border">col-sm</div>
+      <div class="col-12 col-sm border">col-sm</div>
+      <div class="col-12 col-sm border">col-sm</div>
+    </div>
+  </div>
+  <!--
+    Justify-content: to style the containers horizontally
+    justify-content-start for flex-start
+    justify-content-end for flex-end
+    justify-content-center for center
+    justify-content-between for space-between
+    justify-content-around for space-around
+    **space-evenly not supported in bootstrap 4
+    (we use them in a row element)
+    <div class="row justify-content-start"> columns</div>
+    <div class="row justify-content-end"> columns </div>
+    <div class="row justify-content-center"> columns </div>
+    <div class="row justify-content-between"> columns </div>
+    <div class="row justify-content-around"> columns </div>
+  -->
+
+  <div class="container">
+    <div class="row justify-content-start border">
+      <div class="col-auto border bg-info">Flex Start</div>
+      <div class="col-auto border bg-info">Flex Start</div>  <!--stuff it at the start of row-->
+      <div class="col-auto border bg-info">Flex Start</div>
+    </div>
+    <div class="row justify-content-end border">
+      <div class="col-auto bg-success">Flex end</div>       <!--end of row-->
+      <div class="col-auto bg-success">Flex-end</div>
+      <div class="col-auto bg-success">Flex-end</div>
+    </div>
+    <div class="row justify-content-center border">
+      <div class="col-auto bg-info">Center</div>  <!--middle of row-->
+      <div class="col-auto bg-info">Center</div>
+      <div class="col-auto bg-info">Center</div>
+    </div>
+    <div class="row justify-content-between border">
+      <div class="col-auto bg-info">space-between</div> <!--start middle and end of row-->
+      <div class="col-auto bg-info">space-between</div>
+      <div class="col-auto bg-info">space-between</div>
+    </div>
+    <div class="row justify-content-around border">
+      <div class="col-auto bg-info">space-around</div> <!--space stuff space stuff space stuff-->
+      <div class="col-auto bg-info">space-around</div>
+      <div class="col-auto bg-info">space-around</div>
+    </div>
+  </div>
+  <!--
+    justify-content variations for breakpoints:  ones without breakpoints are for extra-small
+    justify-content-start
+    justify-content-end
+    justify-content-center
+    justify-content-between
+    justify-content-around
+    justify-content-sm-start
+    justify-content-sm-end
+    justify-content-sm-center
+    justify-content-sm-between
+    justify-content-sm-around
+    justify-content-md-start
+    justify-content-md-end
+    justify-content-md-center
+    justify-content-md-between
+    justify-content-md-around
+    justify-content-lg-start
+    justify-content-lg-end
+    justify-content-lg-center
+    justify-content-lg-between
+    justify-content-lg-around
+    justify-content-xl-start
+    justify-content-xl-end
+    justify-content-xl-center
+    justify-content-xl-between
+    justify-content-xl-around
+  -->
+  <!--
+    align-items vertically:
+    align-items-start for flex-start
+    align-items-end for flex-end
+    align-items-center for center
+    align-items-stretch for stretch
+    **Same as justify-content: we use it in the row
+  -->
+  <div class="container mb-3">
+    <p>Align Items</p>
+    <div class="row align-items-start border mb-2 h-100px">    <!--aligned top left corner-->
+      <div class="col-auto border bg-info py-2">align-items-start</div>
+      <div class="col-auto border bg-info py-2">align-items-start</div>
+      <div class="col-auto border bg-info py-2">align-items-start</div>
+    </div>
+    <div class="row align-items-end border mb-2 h-100px">
+      <div class="col-auto border bg-info py-2">align-items-end</div> <!--aligned bottom left corner-->
+      <div class="col-auto border bg-info py-2">align-items-end</div>
+      <div class="col-auto border bg-info py-2">align-items-end</div>
+    </div>
+    <div class="row align-items-center border mb-2 h-100px">
+      <div class="col-auto border bg-info py-2">align-items-center</div> <!--aligned center left-->
+      <div class="col-auto border bg-info py-2">align-items-center</div>
+      <div class="col-auto border bg-info py-2">align-items-center</div>
+    </div>
+    <div class="row align-items-baseline border mb-2 h-100px">
+      <div class="col-auto border bg-info py-2">align-items-baseline</div> <!--aligned baseline or top right corner-->
+      <div class="col-auto border bg-info py-2">align-items-baseline</div>
+      <div class="col-auto border bg-info py-2">align-items-baseline</div>
+    </div>
+    <div class="row align-items-stretch border mb-2 h-100px"> <!--aligned top left but box is stretched down to the end of the parent class-->
+      <div class="col-auto border bg-info py-2">align-items-stretch</div>
+      <div class="col-auto border bg-info py-2">align-items-stretch</div>
+      <div class="col-auto border bg-info py-2">align-items-stretch</div>
+    </div>
+  </div>
+  <!--
+    alignment breakpoint variations:
+    align-items-start
+    align-items-end
+    align-items-center
+    align-items-stretch
+    align-items-sm-start
+    align-items-sm-end
+    align-items-sm-center
+    align-items-sm-stretch
+    align-items-md-start
+    align-items-md-end
+    align-items-md-center
+    align-items-md-stretch
+    align-items-lg-start
+    align-items-lg-end
+    align-items-lg-center
+    align-items-lg-stretch
+    align-items-xl-start
+    align-items-xl-end
+    align-items-xl-center
+    align-items-xl-stretch
+  -->
+  <!--'display: flex' in bootstrap is 'd-flex'-->
+  <!--'d-flex:' makes an element a flex container and a block element-->
+  <!--'d-inline-flex' will make the element an inline block element as well as a flex container-->
+  <!--
+    breakpoint variations of 'd and d-inline-flex'
+    d-flex
+    d-inline-flex
+    d-sm-flex
+    d-sm-inline-flex
+    d-md-flex
+    d-md-inline-flex
+    d-lg-flex
+    d-lg-inline-flex
+    d-xl-flex
+    d-xl-inline-flex
+    d-none for display: none;
+    d-inline for display: inline;
+    d-inline-block for display: inline-block;
+    d-block for display: block;
+  -->
+
+    <p>d-flex</p>
+    <div class="d-flex border p-2 mb-3">This is a flex container</div> 
+    <p>d-inline-flex</p>
+    <div class="d-inline-flex border p-2 mb-3">This is an inline flex container</div>
+    <!--
+      Breakpoint forumla:
+      'd-{breakpoint i.e sm md lg xl}-{value}'
+      value: is the display value i.e 768px
+    -->
+    <p>d-inline</p>
+    <div class="d-inline border p-2">d-inline</div>
+    <div class="d-inline border p-2">d-inline</div>
+    <p class="mt-3">d-block</p>
+    <div class="d-block border p-2">d-block</div>
+    <div class="d-block border p-2">d-block</div>
+    <p class="mt-3">d-block d-sm-inline</p>
+    <div class="d-block d-sm-inline border p-2">d-block d-sm-inline</div>
+    <div class="d-block d-sm-inline border p-2 mb-3">d-block d-sm-inline</div>
+
+    <!--
+      **********************Hiding stuff on devices of certain size chart ***********************
+      Screen Size	       || Class
+      Hidden on all      ||	d-none
+      Hidden only on xs	 || d-none d-sm-block
+      Hidden only on sm  ||	d-sm-none d-md-block
+      Hidden only on md  ||	d-md-none d-lg-block
+      Hidden only on lg  ||	d-lg-none d-xl-block
+      Hidden only on xl	 || d-xl-none
+      Visible on all     ||	d-block
+      Visible only on xs ||	d-block d-sm-none
+      Visible only on sm ||	d-none d-sm-block d-md-none
+      Visible only on md ||	d-none d-md-block d-lg-none
+      Visible only on lg ||	d-none d-lg-block d-xl-none
+      Visible only on xl ||	d-none d-xl-block
+    -->
+    
+    <p>How to hide elements on different breakpoints</p>
+    <div class="d-sm-none border">It is now hidden because it is is small</div>
+    <div class="d-none d-sm-block border bg-success"><b>Hide on screens smaller than sm</b></div>
+    <!--
+      Spacing:
+    The format for extra small screens is {property}{sides}-{size}.
+
+    The format for sm, md, lg, and xl screens is {property}{sides}-{breakpoint}-{size}.
+    property is either margin or padding.
+
+    m: for margin
+    p: for padding
+
+    sides is either top, bottom, left, right, horizontal, vertical, or blank if you want to set the margin / padding for all four sides.
+
+    t: for margin-top or padding-top
+    b: for margin-bottom or padding-bottom
+    l: for margin-left or padding-left
+    r: for margin-right or padding-right
+    x: for horizontal paddings / margins on both left and right
+    y: for vertical paddings / margins on both top and bottom
+    blank: for setting paddings / margins on all 4 sides
+
+    -->
+    <p>Spacing Utilities</p>
+    <div class="border m-3 bg-success">m-3</div> <!--margin to 1em-->
+    <div class="border mx-2 bg-success">mx-2</div> <!--mx-2: setting left and right margin to .5rem for all screen sizes-->
+    <div class="border mx-2 my-3 bg-success">mx-2 my-3</div> <!--mx-2 my-3: setting left and right margin to .5rem, and setting top and bottom margin to 1remfor all screen sizes-->
+    <div class="border pl-1 pl-md-3 pl-xl-5 bg-success">pl-1 pl-md-3 pl-xl-5</div> <!--pl-1 pl-md-3 pl-xl-5: setting left padding to .25rem on xs and sm, setting left padding to 1rem on md and lg, setting left padding to 3rem on xl-->
+    <div class="border px-2 px-md-3 pt-2 pt-md-3 bg-success">px-2 px-md-3 pt-2 pt-md-3</div> <!--px-2 px-md-3 pt-2 pt-md-3: setting left and right padding to .5rem on xs and sm, to 1rem on md and larger screens; setting top padding to .5rem on xs and sm, to 1rem on md and larger screens-->
+    <div class="mb-3">
+      <div class="border mx-auto w-100px bg-success">mx-auto</div> <!--mx-auto: setting left and right padding to auto on all screens, useful for horizontal centering an element-->
+    </div>
+    
+    <div class="container">
+      <div class="row border">
+        <div class="col-4 mr-auto bg-success">col-4 mr-auto</div>
+        <div class="col-4 bg-success">col-4</div>
+      </div>
+      <div class="row border">
+        <div class="col-4 ml-auto bg-success">col-4 ml-auto</div>
+        <div class="col-4 ml-md-auto bg-success">col-4 margin left medium auto</div>
+      </div>
+      <div class="row border">
+        <div class="col-auto bg-success">col-auto</div>
+        <div class="col-4 mx-md-auto bg-success">col-4 mx-md-auto</div>
+        <div class="col-auto bg-success">col-auto</div>
+      </div>
+    </div>
+
+    <div class="container mb-3">
+      <p>Flex Direction</p> <!--flex container property: flex-wrap, flex-direction, align-content-->
+      <div class="row flex-column flex-md-row mb-2">
+        <div class="col-12 col-md bg-info border p-2">col 1</div>
+        <div class="col-12 col-md bg-info border p-2">col 2</div>
+        <div class="col-12 col-md bg-info border p-2">col 3</div>
+      </div>
+      <div class="row flex-row flex-md-row-reverse">
+        <div class="col bg-info border p-2">col 1</div>
+        <div class="col bg-info border p-2">col 2</div>
+        <div class="col bg-info border p-2">col 3</div>
+      </div>
+    </div>
+    <!--By default, a row element is 'flex-wrap: wrap' we can change that-->
+    <div class="container mb-3">
+      <p>Flex Wrap</p>
+      <div class="row flex-nowrap w-25 border py-3 mb-2">
+        <div class="col border bg-info p-2">col 1</div>
+        <div class="col border bg-info p-2">col 2</div>
+        <div class="col border bg-info p-2">col 3</div>
+        <div class="col border bg-info p-2">col 4</div>
+        <div class="col border bg-info p-2">col 5</div>
+      </div>
+      <div class="row flex-wrap border mb-2">
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+      </div>
+      <div class="row flex-wrap-reverse border">
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+        <div class="col-auto border bg-info p-2">col</div>
+      </div>
+    </div>
+    <!--To align-content we use:
+      align-content-start: for align-content: flex-start;
+      align-content-end: for align-content: flex-end;
+      align-content-center: for align-content: center;
+      align-content-around: for align-content: space-around;
+      align-content-stretch: for align-content: stretch; 
+    -->
+    <div class="container mb-3">
+      <p>Align Content</p>
+      <div class="row border h-100px">
+        <div class="col-auto bg-info border">col</div>
+        <div class="col-auto bg-info border align-self-start">start</div>
+        <div class="col-auto bg-info border align-self-end">end</div>
+        <div class="col-auto bg-info border align-self-center">center</div>
+        <div class="col-auto bg-info border align-self-stretch">stretch</div>
+        <div class="col-auto bg-info border">col</div>
+      </div>
+    </div>
+
+    <div class="container mb-3">
+      <p>Column Order</p>
+      <div class="row border mb-2">
+        <div class="col bg-info border order-3 order-md-2">3 on xs, sm. 2 on md</div>
+        <div class="col bg-info border order-1 order-md-3">1 on xs, sm. 3 on md</div>
+        <div class="col bg-info border order-2 order-md-1">2 on xs, sm. 1 on md</div>
+      </div>
+      <div class="row border">
+        <div class="col bg-info border order-last">last</div>
+        <div class="col bg-info border order-1 order-md-3">1</div>
+        <div class="col bg-info border order-first">first</div>
+      </div>
+    </div>
+
+    <div class="container mb-3">
+      <p>Border</p>
+      <div class="row mb-3">
+        <div class="col-auto bg-light mr-2 border p-5"></div>
+        <div class="col-auto bg-light mr-2 border-top p-5"></div>
+        <div class="col-auto bg-light mr-2 border-right p-5"></div>
+        <div class="col-auto bg-light mr-2 border-bottom p-5"></div>
+        <div class="col-auto bg-light mr-2 border-left p-5"></div>
+      </div>
+      <p>Border Radius</p>
+      <div class="row">
+        <div class="col-auto bg-light mr-2 p-4 rounded"></div>
+        <div class="col-auto bg-light mr-2 p-4 rounded-top"></div>
+        <div class="col-auto bg-light mr-2 p-4 rounded-right"></div>
+        <div class="col-auto bg-light mr-2 p-4 rounded-bottom"></div>
+        <div class="col-auto bg-light mr-2 p-4 rounded-left"></div>
+        <div class="col-auto bg-light mr-2 p-4 rounded-circle"></div>
+        <div class="col-auto bg-light mr-2 p-4 rounded-0"></div>
+      </div>
+    </div>
+    
+    <p>Responsive Images</p>
+    <img src="http://via.placeholder.com/200x200" class="img-fluid mb-3">
+    <img src="http://via.placeholder.com/200x200" class="img-fluid w-100 mb-3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flex Visual Positions</a>
+
+
+
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

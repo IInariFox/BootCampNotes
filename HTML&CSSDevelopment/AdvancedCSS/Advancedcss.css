@@ -1,0 +1,680 @@
+#title-color{
+  color: white;
+  text-align: center;
+}
+
+/******************************************************** Z dimension **********************************************/
+
+.container div{
+  padding: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.child1{                              
+  background: crimson; /* Rule: stacking context says that positioned element(relative & absolute) have higher priority than static */
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 70%;
+}
+.child2{                    /* By default elements have their position set to default */
+  background: cornflowerblue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70%;
+  width: 20%;
+}
+.child3{
+  background: cyan;
+  color: white;
+  width: 80%;    
+  position: relative; 
+}
+.child4{
+  background: chocolate;
+  margin-top: -20px;     /* From a 3d perspective, relative has the higher position because it is last and it is relative */
+  width: 90%;
+  position: relative;
+}
+.child5{
+  background:orange;
+  margin-top: -20px;
+}
+/* Z index -
+negative: lower in stacking order
+positive: higher in stacking order
+z-index: 0: default index stack
+*/
+
+#container{
+  color: white;
+  background: orange;
+  padding: 20px;
+}
+#container div{
+  padding: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#child1{
+  background: pink;/* Rule: When a element has a pos: abs or rel or z-indx other than auto it will become the root element not HTML doc*/
+  color: white;
+  width: 60%;
+  z-index: 5;
+}
+#child2{
+  background: tomato;
+  color: white;
+  width: 70%;
+  margin-top: -20px;
+  z-index: 4;
+}
+#child3{
+  background: black;
+  color: white;
+  width: 80%;
+  margin-top: -20px;
+  z-index: 3;
+}
+#child4{
+  background: yellowgreen;
+  color: white;
+  margin-top: -20px;
+  width: 90%;
+  z-index: 2;
+}
+#child5{
+  background: yellow;
+  margin-top: -20px;
+  color: black;
+  z-index: 1;
+}
+#grandchild6{ /* Child 6 is still there, but it is behind the container element because it is under the z axis */
+  background: blue;
+  width: 90%;
+  z-index: -1s;
+}
+
+div {
+  padding: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.one1 {
+  background: pink;
+  position: fixed; /* Rule: fixed elements will be positioned above non-positioned elements - fixed will form their own stacking contex without needing a custom z-index value */
+}
+.two2 {
+  background:green;
+  color: white;
+  width: 90%;
+  margin-top: -20px;
+}
+.three3 {
+  background: blue;
+  color: white;
+  width: 80%;
+  margin-top: -20px;
+}
+.grandchild2{
+  background: teal;
+  z-index: -1;
+}
+
+.childclass1{
+  background: green;
+  color: white;
+  opacity: 0.3;
+}
+.childclass2{
+  width: 90%;
+  margin-top: -20px;
+  background:yellow;
+  color:black;
+  opacity: 0.6;
+}
+.childclass3{
+  margin-top: -20px;
+  background: aquamarine;
+  color: black;
+  opacity: 0.9;
+  width: 60%;
+}
+/* Opacity -
+higher the number: are non-poisitioned elements - so they are last
+lower the number: will stack higher than the non-positioned
+We can give an element position relative to stack higher than the opacity
+*/
+/* ALL RULES FOR Z-index:
+The Global Stacking Order
+In summary, the z dimension (stacking order) is a controllable dimension that we can customize to make certain elements appear in front of or behind one another. The general stacking context rule, within a single stacking context, is defined below.
+
+The root element of the stacking context sits at the bottom of the stacking order. The root element of the global (outermost) stacking context is the HTML element.
+Descendant positioned elements (relative, absolute, positioned) with negative z-index values. Higher values are stacked in front of lower values. Elements in the same z-index layer are stacked according to their order of appearance in the HTML.
+Descendant non-positioned elements (static), based on the order they appear in the HTML.
+Descendant positioned elements (relative, absolute) with no custom z-index value (default) or set to auto, and elements with opacity less than 1, based on the order they appear in the HTML.
+Descendant positioned elements (relative, absolute) with positive z-index values. Higher values are stacked in front of lower values. Elements in the same z-index layer are stacked according to their order of appearance in the HTML. */
+
+/**************************************************************Trasform*******************************************************/
+
+.transform-ex{
+  background-color: aqua;
+  width: 100%;
+  padding: 25px;
+  transform: scale(2); /* THis made the box twice its size */
+  /* Rule: position of the element will stay the same as before the scale was applied */
+  border: black solid;
+}
+.transform-ex2{
+  background-color: aqua;
+  border: black solid;   /* We can use scale x() or scale y() to target a specific dimension
+  padding: 25px;
+  transform: scale(2,0.5); /* X and y axis - we said we wanted the text long and the height small */
+  margin: 20px; /*Always use margins to scale properly */
+}
+
+.container-parent{
+  overflow: hidden;
+  position: relative;
+  width: 400px;
+}
+.background{
+  background-image: url(kyotoShrine.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.text-info{
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+.container-parent:hover .background{
+  transform: scale(1.5);
+}
+
+.skew-ex1{
+  transform: skewx(30deg);
+  background: greenyellow;
+  margin: -5px;
+}
+.skew-ex2{
+  transform: skewy(30deg);                        /* ALWAYS USE MARGINS OR IT WILL SPILL ONTO OTHER STUFF */
+  background: grey;
+  margin: 10px;
+}
+.skew-ex3{
+  transform: skew(30deg, 30deg);
+  background: hotpink;
+  margin: 10px;
+}
+
+.rotate-ex1{
+  transform: rotateX(45deg);
+  background:hotpink
+}
+.rotate-ex2{
+  transform: rotateY(45deg);
+  background: tomato
+}
+.rotate-ex3{
+  transform: rotate(-10deg);
+  background: turquoise;
+}
+
+.translate-ex1{
+  transform: translate(30px 30px); /* x axis(positive moves to the right, negative to left) y axis(positive moves up, negative -> down*/ 
+  border: 1px solid black;
+  background: blue;
+}
+.translate-ex2{
+  transform: translate(-30 30px);
+  border: 1px solid black;
+  background: blue;
+}
+.translate-ex3{
+  transform: translate(-30px -30px);
+  border: 1px solid black;
+  background: blue;
+}
+
+.universal{
+  transform: translateX(30px) rotate(45deg) skew(10deg);
+  border: 1px solid black;
+  background: blueviolet;
+}
+
+/*******************************************************Transition***********************************************/
+/*
+transition-property: how we want to define the on, like background-color, margin, color, or all(everthing changes simultaneously)
+transition-duration: defines how long a transition should take place - 1s, 5s, 10s, etc.
+transition-timing-function: effect accelerates through the duration - def value(ease): slow start faster then decelerate
+transition-delay: lets us decide whether we want the transition effect to start after a delay */
+
+.anime-image{
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  height: 300px;
+}
+.parameters{
+  padding: 20px;
+  color: white;
+  position: inherit;
+}
+.background-image{
+  background-image: url(kyotoShrine.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;                 /*we add transition on the background element because that is where the image is */
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-delay: 0.2s;
+}
+.anime-image:hover .background-image{
+  transform: scale(1.1)
+}
+/* We can also use the shorthand method like this: 
+ property name | duration | timing function | delay
+transition: transform 2s ease 0.2s; */
+
+.first-ex{
+  color: pink;
+  background: black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 2s, color 0.5s linear;
+}
+.first-ex:hover{
+  background: blue;
+  color: white;
+}
+/* transition functions:
+linear: same speed throughout animation
+ease: slow start, accel middle, slow end
+ease-in: slow in and accels to regular speed
+ease-out: slow in, slow out - slower start than ease, and faster out than ease
+cubic-bezier(n,n,n,n): creates a speed curve for the transition
+steps(n,start|end): transition will happen over n steps
+*/
+
+.second-ex{
+  color: pink;
+  background: black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition:2s linear;
+}
+.second-ex:hover{
+  background: blue;
+  color: white;
+}
+
+.third-ex{
+  color: pink;
+  background: black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 2s ease;
+}
+.third-ex:hover{
+  background: blue;
+  color: white;
+}
+
+.fourth-ex{
+  color: pink;
+  background: black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 2s ease-in;
+}
+.fourth-ex:hover{
+  background: blue;
+  color: white;
+}
+
+.fifth-ex{
+  color: pink;
+  background: black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition:2s ease-in-out;
+}
+.fifth-ex:hover{
+  background: blue;
+  color: white;
+}
+
+.sixth-ex{
+  color: pink;
+  background: black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 2s cubic-bezier(0,0.6,1,0.09);
+}
+.sixth-ex:hover{
+  background: blue;
+  color: white;
+}
+
+.eigth-ex{
+  color: pink;
+  background: black;
+  width: 50%;
+  margin-left: auto;                            /* Here are the various example of different transition functions */
+  margin-right: auto;
+  transition: 2s steps(5,start);
+}
+.eigth-ex:hover{
+  background: blue;
+  color: white;
+}
+
+.ninth-ex{
+  color: pink;
+  background: black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition:2s  steps(5,end);
+}
+.ninth-ex:hover{
+  background: blue;
+  color: white;
+}
+
+.btn{
+  padding: 20px;
+  background: violet;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.press-button{
+  transition: 0.15s ease;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  outline: thin blue;
+}
+.press-button:hover{
+  transform: translateY(-1px);    /* We made a button that moves when hovered over */
+}
+.press-button:active{  /* active: pseudo code that activates when a user uses mouse - meant for buttons and a hrefs ONLY AFTER HOVER*/
+  transform: translateX(1px);
+}
+
+/*******************************************************Animation************************************************************/
+
+.first-animation{
+  animation: rotate 3s ease 1s;
+  /* @keyframe name | duration | timing-function | delay | iteration-count */
+  background: blue;
+}
+@keyframes rotate{  /* We need a start and end state for the keyframes function - we can give it any name we want*/
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.second-animation{
+  animation: rotation-roll 3s linear 5s; /*If we want it to go back  we use "alternate" but it will do the animation in reverse */
+  width: 30px;
+  height: 15px;
+  color: black;
+  background: chartreuse;
+  flex-wrap: wrap;
+}
+@keyframes rotation-roll{
+  0%{
+    transform: rotate(0); /* At 0% the rotation is at a base/default of being flat */
+  }
+  50%{
+    transform: rotate(180deg);
+    margin-left: 70%;          /* At 50% it is upside-down at 180 deg */
+  }
+  100%{
+    transform: rotate(360deg); /* At 100% it is 360deg */
+  }
+}
+/***********************************************************Flex Box P1********************************************************/
+
+.flex-container{
+  display: flex;
+  border: 1px dashed #666;
+  padding: 10px;
+  margin-bottom: 20px;
+  /* flex-direction: row-reverse; /* Row reverse: reverses the row so intead of 1,2,3 its backwards */
+  /*flex-direction: column; /* column: makes it stack vertically */
+  /*flex-direction: column-reverse; /* column-reverse: makes it stack veritcally backwards */
+}
+/* cross axis: is perpendicular to the relative main axis - if main is column(x axis) then cross is y axis - if main is y axis then cross is x axis */
+/* flex-direction row: if main is on x axis (left to right) then cross is up to down (y axis) */
+/* flex-direction column: if main is on y axis up to down, then cross is on x axis left to right */
+.flex-item{
+  font-size: 25px;
+  background: lightblue; /* The boxes align horizontally - we can align using 'flex-direction' */
+  padding: 30px;
+  border: 1px dashed #666;
+}
+
+
+#flex-container{
+  display: flex;
+  border: 1px dashed #666;
+  padding: 10px;
+}
+#flex-item{
+  font-size: 25px;
+  background: lightblue;
+  padding: 30px;
+  border: 1px dashed #666;
+
+}
+/*
+nowrap: all flex items are on one line in the main axis, items that don't fit in the container will overflow.
+wrap: flex items that don't fit on one line will wrap to a new line, wrapping goes from top to bottom when flex-direction is set to row.
+wrap-reverse: same as wrap, except wrapping goes from bottom to top when flex-direction is set to row.
+*/
+/*
+justify-content: is for aligning content along the main axis
+flex-start: This is the default behavior. Flex items are stacked towards the main start line.
+flex-end: Flex items are stacked towards the main end line.
+center: Flex items are centered along the main axis, as if there is auto margin on the left of the first item and right of the last item.
+space-between: Items are spread out along the main axis. With equal spaces between each element. First item touches the main start line. Last item touches the end start line.
+space-around: Items are spread out evenly along the main axis. But the first and last items do not touch the start and end line. Instead they have the same amount of space on both sides. Since all items have the same padding around them, they won't look evenly spread out. The first item will have 1 unit of space between it and the start line, but 2 units of space between it and the second item. 1 unit from the first item and 1 unit from the second item.
+space-evenly: Items are distributed evenly across the main axis with equal space between each element and the edges.
+*/
+/* Align items: is for aligning items on the cross axis
+stretch: This is the default behavior. Flex items stretch in the cross axis to fill up any available space.
+flex-start: Flex items align to the cross start edge.
+flex-end: Flex items align to the cross end edge.
+center: Flex items center in the cross axis. As if the main axis is a skewer.
+*/
+/* align-content: when there is extra space in the cross axis and there are more than one lines of flex items
+stretch: Default setting. Flex item lines stretch to take up extra space.
+flex-start: Flex item lines align towards the cross start edge.
+flex-end: Flex item lines align towards the cross end edge.
+center: Flex item lines align towards the center of cross axis.
+space-between: Flex item lines distribute the space between each other. First line touches the cross start edge. Last line touches the cross end edge.
+space-around: Flex item lines distribute the space between each other and the cross edges.
+*/
+
+.flex-container1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border: dashed #666;
+}
+.flex-item1{
+  width: 50px;
+  height: 50px;
+  background: cornflowerblue;
+}
+
+#flex-container2{
+  display: flex;
+  border: dashed #666;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#flex-item2{
+  background: cornflowerblue;
+  padding: 20px;
+}
+
+/* default setting for large screens */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* medium screens */
+@media (max-width: 850px) {
+  .navbar {
+    justify-content: center;
+  }
+}
+
+/* small screens */
+@media (max-width: 550px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+/*********************************************************Flex Box P2***********************************************/
+#item-1{
+  order: 2;
+}          /* We can use 'order' on a flex property: it allows us to change the order in which something is aligned */
+#item-2{
+  order: 1;
+}
+.flex-item3{
+  background: cornflowerblue;
+  padding: 10px;
+  border: black dashed;
+}
+.flex-container3{
+  border: dashed 1px black;
+}
+
+.flex-grow-1{
+  flex-grow: 1; /*grow: how much free space it will take up relative to the other stuff on the same row */
+  /* In this case, the middle column takes up the majority of the space */
+}
+.flex-grow-2{
+  flex-grow: 2; /* This ratio makes it so that the left and right side take up a lot of space but the one in the middle still takes up the majority of the space */
+}
+.flex-grow-3{
+  flex-grow: 3;
+}
+
+.flex-shrink .flex-item{
+  width: 150px;
+}                             /*default value shink = 0*/
+                              /*when property is 0 it does not shrink, items set to 1 will shrink in even amount */
+.flex-shrink-0{
+  flex-shrink: 0; 
+}
+.flex-shrink-2{
+  flex-shrink: 2;
+}
+
+.flex-basis-auto .flex-item .flex-basis-0 .flex-item{
+  flex-grow: 1;/* default size for flex-items is flex-basis or auto which tells the browser to use the width/height property of the flex item as the default size */
+  padding: 0;
+  text-align: center;
+}
+.flex-basis-0 .flex-item{
+  flex-basis: 0;
+}
+
+/* One value, unitless number: flex-grow 
+flex: 1;
+
+/* One value, length value: flex-basis 
+flex: 5em;
+flex: 20px;
+
+/* Two values: flex-grow | flex-basis 
+flex: 1 20px;
+
+/* Two values: flex-grow | flex-shrink
+flex: 1 1;
+
+/* Three values: flex-grow | flex-shrink | flex-basis 
+flex: 1 0 50%;
+*/
+.flex-1{
+  flex:1;
+}
+.flex-2{
+  flex:2;
+}
+.flex-3{
+  flex:3;
+}
+/*align-self: used on individual flex items to override align-items setting */
+.align-items-start{
+  height: 150px;
+  align-items: flex-start;
+}
+.align-self-center{
+  align-self: center; /*Here we aligned the items vertically from the parent class then finished at the end */
+}
+.align-self-end{
+  align-self: flex-end;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.image{
+  padding: 30px;
+  border: 1px solid #ddd;
+  background: orange;
+  flex: 2;
+}
+.paragraph{
+  background: lightblue;
+  flex: 1;                  /* Here we made the image to the opposite side of the text and at a certain pixel range go under it*/
+}
+@media (min-width: 600px){
+  .content{
+    flex-direction: row;
+  }
+  .right .image{
+    order: 2;
+  }
+  .right .paragaph{
+    order: 1;
+  }
+}

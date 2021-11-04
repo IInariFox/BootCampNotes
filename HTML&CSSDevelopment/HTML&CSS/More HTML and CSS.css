@@ -1,0 +1,77 @@
+#bgColor{
+  background-color: darkred;
+}
+#titleName{
+  color: yellow;
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-align: center;
+  line-height: 1em; /* This is the vertical distance between two lines of text */
+}
+
+/* :hover: set styles for when the mouse hovers on top of an element */
+.hoverText:hover{
+  color: orange;
+  font-weight: 900;
+  text-indent: 1em; /* With this, we can indent text */
+  text-shadow: 3px 3px 3px orange; /* Creates a shadow text behind the text - four values, horizontal offset, vertical offset, shadow blur radius, shadow color */
+}
+
+#backgroundImage{
+  background-image: none; /* this is how we set an image to the background: url(path/to/image.png) */
+  background-repeat: no-repeat; /* With this, the image will not repeat itself all throughout the element we placed it in */
+  background-position: center; /* Images are by at the top left by default */
+  background-size: 50% auto; /* first value: width - second value: height */
+}
+#gradientBG{
+  background: darkblue;
+  background: linear-gradient(90deg, yellow, darkblue 70%, white); /* This changes the color in a fade style in a desired section - top to bottom - also, we changed the direction of the fade to 90deg coming in from the left side and changing colors*/
+}
+
+#listStyle{
+  list-style: hiragana; /* We changed the list style to hiragana */
+}
+
+img{
+  display: block; /* we can change the variables of the images, start on its own line, height, width etc */
+}
+#googleFrame{
+  width: 250px;
+  height: 150px;
+}
+
+#firstTable{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#firstForm p{
+  color: white;
+}
+#fsDiv fieldset{
+  border-color: white;
+  border-width: thick;
+}
+#fsDiv label{
+  font-weight: 800;
+}
+
+/* attribute or []: targets elements that have a certain attribute */
+/* [attribute]: targets elements with the attribute element */
+/* [attribute=value]: targets elements of attribute but with the value type */
+/* [attribute~=value]: only targets if the value space-seperated list of values contained in attributes value */
+
+p[data-name]{
+  font-size: 22px;
+  color: aqua;
+}
+p[data-name=John]{ /* we can see that we target data-name and data features to customize how we change each element */
+  color: white;
+  text-decoration: underline;
+}
+p[data-features~=smart]{
+  text-decoration: line-through;
+}
+

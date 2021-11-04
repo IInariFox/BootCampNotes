@@ -1,0 +1,24 @@
+p/*selector*/{
+    color/*property*/: red /*property value*/;
+}       /*     declaration     */
+
+.pageID{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+
+}
+
+.someName{
+    color: orange;
+    font-weight: 500;
+    font-size: 1.5em;
+
+}
+
+.aName, .hName{ /* this is how add multiple class names to edit them */
+    font-size: 15px;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

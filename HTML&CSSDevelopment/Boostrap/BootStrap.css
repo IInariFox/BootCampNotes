@@ -1,0 +1,118 @@
+@media all and (min-width: 768px){ /*media@: Will only activate if the media query expressions (type and feature) are true */
+  .col-sm-1{
+  width: 8.333333%;
+}
+.col-sm-2{
+  width: 18.666666%;
+}
+.col-sm-3{
+  width: 25.99999%
+}
+}
+/*
+Media types -
+all: is the default
+print: for documents on screen in print preview mode
+screen: color computer screens
+speech: speech synthesizers
+*/
+
+/*
+logical operators -
+and: want the media query to be true when all conditions are true add 'and' to join them together
+, seperate with a comma 
+not: reverse conditions - if true then == false - will only apply to expression it is in when there are multiple conditions seperated by comma
+*/
+
+
+@media (max-width: 600px) and (color), (min-width: 800px) and (monochrome){
+  /*stuff*/
+}
+@media not all and (color) { /* ... */ }
+/* is evaluated like this */
+@media not (all and (color)) { /* ... */ }
+
+@media not speech and (color), print and (color) { /* ... */ }
+/* is evaluated like this */
+@media (not (speech and (color))), print and (color) { /* ... */ }
+
+
+/* media features -
+larger screen widths should be placed after smaller screen widths -  small first then big
+*/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+.col-xs-1 {
+  width: 8.333333%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .col-sm-1 {
+    width: 8.333333%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .col-md-1 {
+    width: 8.333333%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .col-lg-1 {
+    width: 8.333333%;
+  }
+}
+
+
+.foo{
+  background: red;
+  text-align:left;
+  color: white;
+}
+@media (min-width: 768px){
+  .foo{
+    background:green; /* If it reaches a certain pixel width it will change color and alignment */
+    text-align: center;
+  }
+}
+@media (min-width: 992px){
+  .foo{
+    background: blue;
+    text-align: right;
+  }
+}
+
+/* Min-width value rules follow the same rule: first goes small then goes large */
+@media (min-width: 768px) {
+  .foo {
+    background: green;
+  }
+}
+
+@media (min-width: 992px) {
+  .foo {
+    background: blue;
+  }
+}
+
+@media (min-width: 1200px) {
+  .foo {
+    background: red;
+  }
+}
+
+@media (max-width: 1119px) {
+  .bar { ... }
+}
+
+@media (max-width: 991px) {
+  .bar { ... }
+}
+
+@media (max-width: 767px) {
+  .bar { ... }
+}

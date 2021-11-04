@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="DOMEvents.css">
+  <title>DOM Events Notes</title>
+</head>
+<body>
+  <div class="grandparent">
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </div>
+  <p onclick="paragraphClicked()">ParagraphClick</p>
+  <input onfocus="inputHasFocus()" /> 
+  <br />
+  <button id="button">PressButton</button>
+
+  <p id="second-paragraph">Paragraph has a <button id="third-button">Button</button></p>
+  <button class="targeted-button">Target button</button>
+  <br />
+  <a id="unamed-link" href="www.website.com" target="_blank">No press</a>
+
+  <div id="box-one">
+    <span>Box 1</span>
+    <div id="box-two">
+      <span>Box 2</span>
+      <div id="box-three">
+        <span>Box 3</span>
+      </div>
+    </div>
+  </div>
+  
+  <div id="log"></div>
+
+  <div id="blob"></div>
+
+  <p>click and drag bar with mouse</p>
+  <div id="bar"></div>
+
+  <div id="progress">0%</div>
+
+  <form>
+    <div id="terms">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis porro error quidem perspiciatis velit? Illum, suscipit et consequuntur exercitationem at error deserunt, eligendi, similique debitis veniam modi ullam cupiditate voluptatem.
+      </p>
+    </div>
+    <input type="checkbox" id="agree" name="agree" disabled/>
+    <label for="agree">I agree</label>
+  </form>
+  <nav id="top-nav">...</nav>
+  <div id="hero">...</div>
+  <div>Content</div>
+
+  <p>Press a key and find out which one was pressed</p>
+  <div class="log"></div>
+
+  <div id="pacman"></div>
+
+  <div>
+    <span class="label">Full Name</span>
+    <input type="text" id="second-input" />
+  </div>
+
+  <p tabindex="0">tabindex0</p>
+  <p tabindex="0">tabindex0</p>
+  <p tabindex="0">tabindex0</p>
+  <p tabindex="1">tabindex1</p>
+  <p tabindex="2">tabindex2</p>
+  <p tabindex="3">tabindex3</p> <!--Tab index allows user to be able to use the tab key to access information, 0-10-->
+
+
+  <h1>This should be blue</h1>
+
+  <img src="#" onload="imageLoaded()">
+
+  <p><span id="timer">0</span>ms</p>
+  <button onclick='startTimer()'>Start</button>
+  <button onclick="stopTimer()">Stop</button>
+
+  <div id="box"></div>
+  <button onclick="startAnimation()">Start Moving</button>
+  <button onclick="stopAnimation()">Stop Moving</button>
+
+  <button onclick="stopTimerWithConfirm()">Stop with confirm</button>
+
+
+  <br />
+  <div id="second-box" style="background-color: pink">
+    <span id="display" hidden>Changing to <span></span> in 2s</span>
+  </div>
+
+  <button onclick="changeColor()">Change Color</button>
+  <button onclick="cancelChange()">Cancel</button>
+
+  <button onclick="clearInterval(interval)">Stop interval</button> <!--this is the clearIntveral method with the var interval in place-->
+
+  <div>
+    Username <input id="username" type="text" placeholder="insert a username"/> <span id="valid"></span>
+  </div>
+
+  <p>ScrollTop: <span id="scrollTop"></span>px</p>
+  <div class="container">
+    <div class="context"></div>
+  </div>
+  <br />
+  <button id="my-id">Click</button>
+
+
+  <script src="DOMEvents.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BootStrap Notes</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!--Only add "user-scalable=no" at the end when the website is meant for mobile phones--> <!--This is how we make the screen size adaptive to whatever screen-->
+  <!--
+    boostrap: this goes in the bottom head-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body style="background-color:rgb(56, 75, 77);" >
+  <h1 class="text-center"><a href="https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp" target="_blank">Click for ALL Bootsrap tags</a></h1>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <a href="#" class="navbar-brand">Navigation</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navmenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#learn" class="nav-link">First Button</a>
+          </li>
+          <li class="nav-item">
+            <a href="#questions" class="nav-link">Second Button</a>
+          </li>
+          <li class="nav-item">
+            <a href="#instructors" class="nav-link">Third Button</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    .customRow{
+      background-color: bisque;
+      height: 400px;
+    }
+  </style>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-2">Col One</div>
+      <div class="col-sm-12 col-md-6 col-lg-8">Col Two</div>
+    </div>  
+
+    <div class="row">
+      <div class="col-sm-6 order-1">Col One</div>
+      <div class="col-sm-6 order-1">Col Two</div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 offset-1">Col One</div>
+      <div class="col-sm-4 offset-1">Col Two</div>
+    </div>
+
+    <div class="row customRow justify-content-center align-items-center">
+      <div class="col-sm-4"><div class="p-3 border bg light">Col One</div></div>
+      <div class="col-sm-4"><div class="p-3 border bg dark">Col Two</div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!--container: is a fixed width-->
+    <div class="row">
+      (Onecolumn)
+    </div>                             <!--Rows: horizontal across page  -   columns: vertical down page-->
+    <div class="row">
+      (Second Column)
+    </div>
+  </div>                                <!--**We can only use one of these for each grid structure we create**-->
+  <div class="container-fluid">
+    <!--container-fluid: is full width-->
+  </div>
+  <div id="containerEx">
+    <div class="container">
+      container
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xs-3"><div class="p-1 border bg dark">This column is in the left</div></div> <!--We added a padding of 1, and a border that is dark-->
+        <div class="col-xs-3"><div class="p-1 border bg dark">This column is the second left</div></div> <!--**Only a max of 12 columns per row anything bigger moves downa line**-->
+        <div class="col-xs-3"><div class="p-1 border bg dark">This column is second right</div></div>
+        <div class="col-xs-3"><div class="p-1 border bf dark">This column is first right</div></div>
+      </div>
+    </div>
+  </div>
+  <!--
+    For content to be spaced out |   |    |   |
+    <div container>
+      <div row>
+        <div col-*>
+          <div cont>
+            content
+          </div> - for cont
+        </div>  - for column
+      </div> - for row 
+    </div> - for container
+  -->
+  <!--
+    Column Categories:
+    xs - for phones or(<768px) - 50% wide mobile
+    sm - for tablets or(=>786px) - 33% wide on tablets
+    md - for desktops or(=> 992px) - 25% wide small desktops
+    lg - for large desktops or(=>1200px) - 16.6% on largedesktops
+    **Always start on small first, and make sure it adds up to 12
+  -->
+  <div id="containerEx">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="p-1 border bg dark">Expand and collapse</div></div> <!--When a row is by itself it is ok to make everything fit to one line, but if there are multiple columns on one row, we need to adapt-->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+      <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+      <!-- Add the extra clearfix for only xs devices -->
+      <div class="clearfix visible-xs-block"></div> <!--clearfix: to specify whether an element will hide or show for different screen size-->
+      <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+      <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">Offset Example</div> <!--offset: leaves a gap to the rightof its default position-->
+      <!--
+        Offset reference:
+        One column: 3 ==  halfway on the page
+        We could replace the xs with any size we need
+      -->
+      <div class="col-xs-3">Second Offset Example</div>
+      <div class="col-xs-3 col-md-6 col-md-offset-6">Third Offset Example</div>
+    </div>
+  </div>
+
+  <div class="containerEx">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-9">First Block 9/12</div>
+        <div class="col-xs-3">Second Block 3/12</div>
+      </div>
+      <!--
+        Push: move elements to the left
+        Pull: move elements to the right
+
+      -->
+      <div class="row">
+        <div class="col-xs-9 col-xs-push-3"><div class="p-1 border bg dark">Lobsided</div></div>
+        <div class="col-xs-3 col-xs-pull-9"><div class="p-1 border bg dark">Something</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="containerEx">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-9"><div class="p-1 border bg dark">Top Bar</div></div>
+        <div class="row">
+          <div class="col-xs-8 col-sm-6">
+            <div class="border bg dark">This one is nested within the first row</div></div>
+          </div>
+          <div class="col-xs-4 col-sm-6">
+            <div class="border bg dark">Nested right next to the other within the first</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1>h1 Boostrap Heading <small>This is smaller secondary text</small></h1>
+  <p class="text-center">This text is centered</p>
+
+  <address>
+    <strong>Twitter Inc.</strong><br> <!--We created an address for an email-->
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora suscipit nisi mo<br>
+     enim nulla exercitationem accusantium similique iure tempore iste saepe, voluptate ipsam?<br>
+    <abbr title="phone">P:</abbr>(xxx)xxx-xxxx-xx
+  </address>
+  <address>
+    <strong>Full Name</strong><br>
+    <a href="mailto:#">somename@email.com</a>
+  </address>
+
+  <blockquote>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, quisquam. Ex minima consectetur quod qui ea quia aliquam adipisci! Officia, aperiam. Nam tempore temporibus facere, perspiciatis delectus dicta sed consequuntur.</p>
+    <footer>By a computer in <cite title="source title">c.2020</cite></footer>
+  </blockquote>
+
+
+  <ul>
+    <li>
+      <!--Unordered list-->
+      One
+      Two
+      Three
+    </li>
+  </ul>
+  <ol>
+    <li>
+      <!--Ordered list-->
+      One
+      Two
+      Three
+    </li>
+  </ol>
+  <ul class="list-unstyled">
+    <li>
+      <!--Unstyled list applies to immediate children only-->
+      One
+      Two
+      Three
+    </li>
+  </ul>
+<ul class="list-inline">
+  <li>
+    <!--inline-list-->
+    Testing
+    testng
+  </li>
+</ul>
+<dl>
+  <dt><!--description list-->One thing</dt>
+  <dd>Something</dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt><!--Horizontal listing-->Also thing</dt>
+  <dd>Another thing</dd>
+</dl>
+
+<table class="table">
+  <tr>Somthing top</tr> <!--Regular table-->
+  <td>Else bottom</td> 
+</table>
+
+<table class="table table-striped">
+  <tr>Top row</tr>      <!--Table with each row being striped-->
+  <td>Bottom row</td>
+</table>
+
+<table class="table table-bordered">
+  <tr>Top row</tr>    <!--each row is bordered-->
+  <td>Bottom row</td>
+</table>
+
+<table class="table table-hover">
+  <tr>Top row</tr>
+  <td>Bottom Row</td>
+</table>
+
+<table class="table table-condensed">
+  <tr>Top</tr>
+  <td>Bottom</td>
+</table>
+
+<!-- On rows -->
+<tr class="active">...</tr>
+<tr class="success">...</tr>
+<tr class="warning">...</tr> <!--all of these go on the table rows-->
+<tr class="danger">...</tr>
+<tr class="info">...</tr>
+
+<!-- On cells (`td` or `th`) -->
+<tr>
+  <td class="active">...</td>
+  <td class="success">...</td>
+  <td class="warning">...</td> <!--All of these go on the table content-->
+  <td class="danger">...</td>
+  <td class="info">...</td>
+</tr>
+
+
+<table class="table table-striped">
+  <tr class="active">
+    <td>Top is red</td>
+  </tr>
+  <tr class="info">
+    <td>bottom is blue</td>
+  </tr>
+</table>
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email Address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File Input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block level help here</p>
+  </div>
+  <div class="checkbox">
+    <lable>
+      <input type="checkbox">Check me out
+    </lable>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+<button type="button" class="btn">Default</button>
+
+<button type="button" class="btn btn-default">Default</button><!-- Standard button -->
+
+<button type="button" class="btn btn-primary">Primary</button><!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+
+
+<button type="button" class="btn btn-success">Success</button><!-- Indicates a successful or positive action -->
+
+
+<button type="button" class="btn btn-info">Info</button><!-- Contextual button for informational alert messages -->
+
+
+<button type="button" class="btn btn-warning">Warning</button><!-- Indicates caution should be taken with this action -->
+
+
+<button type="button" class="btn btn-danger">Danger</button><!-- Indicates a dangerous or potentially negative action -->
+
+
+<button type="button" class="btn btn-link">Link</button><!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+
+<button type="button" class="btn btn-success btn-block">
+  This button takes up entire row
+</button>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3">
+      <img src="kyotoShrine.jpg" alt="Kyoto Rounded" class="img-rounded width">
+      <img src="kyotoShrine.jpg" alt="Kyoto Circle" class="img-circle">
+      <img src="kyotoShrine.jpg" alt="Kyoto Thumbnail" class="img-thuumbnail">
+    </div>
+  </div>
+</div>
+
+
+<div class="foo">
+  <p>It is raining outside</p>
+</div>
+
+    <!--Bootstrap: this goes in the bottom body-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--postion: abosolute on text box U.S-->

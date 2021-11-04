@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+  <link rel='stylesheet' type="text/css" href="DOMManipulation.css">
+</head>
+<body style="background-color: brown">
+  <h1>Some heading</h1>
+  <a href="xxx">Link</a>
+  <p>Hello World</p>
+  <p class="new-class">Hello World</p>
+  <div>
+    <p class="inner-par" id="inner-par">First inner part</p>
+    <p class="second-innner-par" id="second-inner-par">Second inner par</p>
+  </div>
+  <button onClick="removeNote()">Remove Note</button>
+
+  <h1 class="new-h1">New H1 class</h1>
+  <button class="new-button diff-button">Press</button>
+
+  <h1 class="bold">Biggest Name</h1>
+  <button class="activation">Press to activate</button>
+
+  <ul class="unordered-list">
+    <li>New</li>
+    <li>second</li>
+    <li>third</li>
+    <li>fourth</li>
+    <li>fifth</li>
+    <li>sixth</li>
+  </ul>
+  <button class="third-button">PressMe</button>
+  <input type="text" class="first-input"/>
+
+  <div class="container"></div>
+  <button onClick="addTextNode()">Adds a text node</button>
+  <button onClick="addNewParagraph()">AddsNewParagraph</button>
+  <button onClick="setContent()">SetsNewContent</button>
+
+  <p>Hello World</p>
+  <button onClick="makeGreen()">
+    Makes Green
+  </button>
+  <button onClick="makeBold()">
+    Makes Bold
+  </button>
+
+  <h2 id="new-title">ClassListHeader</h2>
+  <p id="some-paragraph">Some Paragraph</p>
+
+  <div id="new-paragraphs">
+    <p class="hidden">p1</p>
+    <p class="hidden">p2</p>
+    <p class="hidden">p3</p>
+  </div>
+  <button onClick="show(0)">
+    Show 1
+  </button>
+  <button onClick="show(1)">
+    Show 2
+  </button>
+  <button onClick="show(2)">
+    Show 3
+  </button>
+  
+  <div id="paragraphs2">
+    <p>hello world</p>
+    <p data-color="blue">hello world</p> <!--helps specify which ones we want to set to blue-->
+    <p>hello world</p>
+    <p data-color="blue">hello world</p>
+  </div>
+  <button onClick="makeParagraphsBlue()">
+    Make Paragraphs Blue
+  </button>
+  <h2 id="page-title">Page Title</h2>
+  <div id="page-content"></div>
+
+  <h1 class="fancy">Fancy Class</h1>
+
+  <div id="box"></div>
+  <button onClick="moveBoxRight()">Move Right</button>
+
+  <button onClick="startInterval()">Move Right</button>
+  <button onClick="stopInterval()">Move Right</button>
+
+  <button onClick="startAnimationRequest()">start</button>
+  <button onClick="stopAnimationRequest()">stop</button>
+  <div class="slide"></div>
+  <button onClick='toggleAnimation()'>Slide</button>
+
+
+
+</body>
+<script src="DOMManipulation.js"></script>
+</html>
+
+
+  <!--
+  <body>
+    <div></div>
+    <script>
+      // Create a new text node with content "Hello World"
+      var textNode = document.createTextNode("Hello World"); 
+          //appendChild the created TextNode into div
+      // Append the new text node to the div element, use appendChild
+      document.querySelector("div").appendChild(textNode);
+      
+    </script>
+  </body>
+-->
+
+<!--
+<body>
+    <ul>
+      <li>This is a list item</li>
+      <li>This is also a list item</li>
+    </ul>
+    <script> //adding in innerHTML
+      // Set the HTML content of the ul element
+      var ul = document.querySelector("ul");
+      ul.innerHTML = '<li><a href="https://en.wikipedia.org/wiki/Dog">Dogs</a></li><li><a href="https://en.wikipedia.org/wiki/Cat">Cats</a></li>';
+      
+    </script>
+</body>
+-->

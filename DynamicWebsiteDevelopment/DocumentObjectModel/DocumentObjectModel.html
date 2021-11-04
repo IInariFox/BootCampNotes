@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width='device-width', initial-scale=1.0">
+  <title>JQuery Development Notes</title>
+  <script>alert('Hello World');</script>
+  <script>
+      function changeContent () {
+        document.getElementById('special').innerHTML = 'I was changed by javascipt'; //<-We changed the JS from Hello world, to
+      }
+    </script>
+    <link rel="stylesheet" type="text/css" href="DocumentObjectModel.css">
+</head>
+<body style="background-color: brown;">
+  <h1>Testing Javascript</h1>
+  <script>alert('Goodbye');</script>
+  <p id="special">Hello World!</p>
+  <button onclick="changeContent()">Click Me</button>
+  <br />
+  <div>
+    <span title="hello" id="hi" data-test='this is a test'>Hello</span>
+    <span style="display: none;" id="bye" class="bye1 bye2">Bye</span>
+    </div>
+  <script> 
+    var doc = document; //assigned document object to document variable
+    console.log(doc);
+  </script>
+  <script>
+    var nodeTypeOfP = Node.ELEMENT_NODE; //gets back the node type of an element
+  </script>
+  <ul id="fruitList">
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Pears</li>
+  </ul>
+  <p class="second-class">First</p>
+  <p class="first-class">Second</p>
+  <div>
+    <p>third but in div</p>
+  </div>
+  <div>
+    <p class="first-class">First class</p>
+    <p class="second-class">second class</p>
+  </div>
+
+  <span>First Span</span>
+
+  <div>
+    <span>Inner Second Span</span>
+    <span>Inner Third Span</span>
+    <div>
+      <span> Inner Inner fourth span</span>
+    </div>
+  </div>
+  <ul>
+    <li id="A"><!-- first-child -->
+      <h3>Title 1</h3><!-- first-child -->
+      <ul><!-- last-child -->
+        <li>1</li><!-- first-child, nth-child(1) -->
+        <li>2</li><!-- nth-child(2) -->
+        <li>3</li><!-- last-child, nth-child(3) -->
+      </ul>
+    </li>
+    <li id="B"><!-- last-child -->
+      <h3>Title 2</h3><!-- first-child -->
+      <ul><!-- last-child -->
+        <li>4</li><!-- first-child, nth-child(1) -->
+        <li>5</li><!-- nth-child(2) -->
+        <li>6</li><!-- last-child, nth-child(3) -->
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+  </ul>
+
+  <div id="familyTree">
+    <h2>The Perterson Family</h2>
+    <ul>
+      <li>
+        <h3>Jack and Jay</h3>
+        <ul>
+          <li>
+            <h3>Tom and Mary</h3>
+            <ul>
+              <li>Peter</li>
+              <li>Patricia</li>
+              <li>Priscilla</li>
+            </ul>  
+          </li>
+          <li>
+            <h3>Ben and Liza</h3>
+            <ul>
+              <li>John</li>
+              <li>Judy</li>
+              <li>Jerry</li>
+            </ul>    
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
+  <script src='DocumentObjectModel.js'></script> <!--We insert the JS file in the bottom of body-->
+</body>
+</html>

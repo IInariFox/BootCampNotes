@@ -1,0 +1,167 @@
+#titleName{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3em;
+  color: yellow;
+  text-align: center;
+  text-decoration: underline;
+
+}
+
+.boxmodelOne{
+  font-size: 20px;
+  background-color: red;
+  height: auto; /* height and width are the content */
+  width: auto;
+  padding: 25px;/* Space between content and border - it makes the content touch the border */
+  border: 10px solid orange;
+  margin: 10px;/* Outside of the border */ /* spacing between this item and the next block */
+  box-sizing: border-box; /* Makes height and width account for the border and padding  */
+}
+
+.boxmodelTwo{
+  font-size: 20px;
+  background-color: red;
+  height: 150px;
+  width: 150px;
+  padding: 25px;
+  border: 10px solid orange; /* **************solid, double, dashed, dotted, none****************** */
+  margin: 10px;/* Margin collapses between two models that are next to eachother */ /* Instead of moving down double amount, it will make the implied movement */
+
+}
+
+.longHand{
+  background-color: pink;
+  margin-top: 10px;
+  margin-right: 25px;
+  margin-bottom: 5px;
+  margin-left: 15px; /* We were able to specify exactly what spacing we wanted for the box */
+  border: 10px solid orange;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+
+.secOne{
+  background-color: orange;
+  float: left;
+  margin: 0 1% 24px 1%;
+  width: 64%;
+}
+.secTwo{
+  background-color: orange;
+  float: right;
+  margin: 0 1% 24px 1%;
+  width: 31%; /* These parts will combine together as long as they fit on the same line */
+}
+.posFloat footer{
+  background-color: teal;
+  float: bottom; /* footer automatically overlaps other blocks */
+  clear: both; /* we use this to stop the overlap */
+}
+#headerP{
+  background-color: teal;
+  float: top;
+}
+
+
+.clearFix:before, .clearFix:after{ /* before after: pseudo code selectors that lets us define style before and after */
+  content: "";
+  display: table;
+}
+.clearFix:after{
+  clear: both;
+}
+.clearFix{
+  clear: both;
+  *zoom: 1;
+} /* floats are not commonly used */
+#cfsecOne{
+  background-color: red;
+  float: left;
+  margin: 0 1% 24px 1%;
+  width: 49%;
+}
+#cfsecTwo{
+  background-color: red;
+  float: right;
+  margin: 0 1% 24px 1%;
+  width: 45%;
+}
+
+/* below, we use inline blocks which are more widley used and important */
+
+#divInline section{ /* here we called a specific section of the class */
+  display: inline-block; /* we use this to display elements horizontally and then margins to fix their position */
+  margin: 0 1%;
+  width: 23%;
+  margin-right: -4px; /* we can use this to fit all four elements in one line but it does not work in older IE 6 & 7 */
+} 
+
+.bigSec{
+  display: inline-block;
+  margin: 0 20px 30px;
+  background-color: orange;
+}
+/*
+ inline vs inline-block: IB does not add a line-break after the element, IB elements stack horizontally next to eachother
+ */
+.lilSec{
+  display: inline-block;
+  margin: 60px 15px 0;
+  background-color: orange;
+}
+
+.totalGrid{
+  display: block;
+  width: 500px;
+  background-color: orange;
+  margin: 0 auto; /* This aligns the text to the center when a parent has a fixed pixel size */
+}
+.gridC{
+  display: inline-block;
+  width: 25%;
+  background-color: orange;
+  margin-right: -4px;
+}
+
+
+/* 
+  Relative Relative: acts just like static positioning, but we can change the top, left, right and bottom of itself - will overflow the parent or chld because it is relative to where it normally would be in the document if it was statically positioned
+  Relative Abosolute: stick something in a certain position and don't want anything else to move around it - if specified it will go to an exact location on screen - based on its parent element or anything we deem relative - set position to 0 
+  Relative Fixed: are always fixed positioned based on the entire HTML document it has nothing to do with parents - stays on screen when we scroll
+  Relative Sticky: a combination of both relative and fixed position into one - will be relative position but until we scroll past it, it will move based on the HTML document
+
+*/
+#positionParent{ /* All html/css elements are set to a static position when applied to a page */
+  background-color: cornflowerblue;
+  padding: 8px;
+  position: relative;
+  height: 200vh;
+
+}                                                     
+.firstChild{
+  background-color: crimson;
+  position: relative;
+  left: 10px;
+
+}
+.secondChild{
+  background-color:yellow;
+  position: absolute;
+  padding: 3px; /* This element is gone because it is absolute and relative to the parent element */
+  top: 0; /* we set it to zero based on the top of the parent where it is absolute to that area */
+
+}
+.thirdChild{
+  background-color: darkolivegreen;
+  position: fixed; 
+
+}
+.fourthChild{
+  background-color: maroon;
+  position: sticky;
+  top: 0
+
+}

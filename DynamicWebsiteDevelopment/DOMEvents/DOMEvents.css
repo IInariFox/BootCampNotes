@@ -1,0 +1,121 @@
+body {
+  background: darkblue;
+  height: 3000px;
+}
+#unamed-link {
+  color: aqua;
+  border: solid black 2px;
+  list-style: none;
+}
+
+#blob {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+
+#box-one, #box-two, #box-three {
+  padding: 40px 50px 50px 50px;
+}
+#box-one {
+  background-color: #90CAF9;
+}
+#box-two {
+  background-color: #42A5F5;
+}
+#box-three {
+  background-color: #1E88E5;
+  height: 200px;
+}
+#log {
+  margin-top: 20px;
+  border: 1px solid black;
+  height: 200px;
+  overflow: scroll;
+}
+
+#bar {
+  background: brown;
+  height: 30px;
+  width: 50px;
+}
+
+#progress {
+  background: white;
+  border: solid black 1px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+#terms {
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 2px;
+  overflow: scroll;
+}
+
+
+#top-nav {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#top-nav a {
+  color: #FFF;
+}
+#top-nav.inverse {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#top-nav.inverse a {
+  color: #1976D2;
+}
+
+#pacman {
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-right: 30px solid transparent;
+  border-top: 30px solid yellow;
+  border-left: 30px solid yellow;
+  border-bottom: 30px solid yellow;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: fixed;
+}
+
+.control {
+  position: relative;
+  padding-top: 20px;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  padding-left: 2px;
+  transition: all 0.2s linear;
+  color: #666;
+}
+.label.displaced {
+  bottom: 20px;
+  font-size: smaller;
+}
+#second-input {
+  position: relative;
+  background: transparent;
+}
+
+#box {
+  margin: 10px 0;
+  width: 50px;
+  height: 50px;
+  background: skyBlue;
+  position: relative;
+}

@@ -1,0 +1,84 @@
+.newest-button {
+  color: aqua;
+  font-size: 20px;
+  border: 10px solid black;
+}
+.activation-parameters {
+  color: blue;
+  border: solid black 10px;
+  transform: rotate(180deg);
+}
+
+.green {
+  color: green;
+  transform: rotate(180deg);
+}
+#bold {
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+.red-bg {
+  background: red;
+}
+.white-text {
+  color: yellow;
+}
+.big-font {
+  font-size: 36px;
+}
+
+.hidden {
+  display: none;
+}
+
+.blue {
+  color: blue;
+}
+
+p {
+  color: yellow;
+}
+button {
+  background-color: yellow;
+}
+
+.fancy {
+  color: white;
+  font-size: 4rem;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 100vh;
+}
+
+span {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+span.fade {
+  opacity: 1;
+}
+
+#box {
+  width: 50px;
+  height: 50px;
+  background-color: purple;
+  position: relative;
+  border: red solid 5px;
+}
+
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 50px);
+  }
+}
+
+.slide {
+  animation: 7s infinite alternate slide;
+}

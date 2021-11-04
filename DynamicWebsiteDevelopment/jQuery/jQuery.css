@@ -1,0 +1,42 @@
+body {
+  background-color: crimson;
+}
+
+#first-h1 {
+  text-align: center;
+  color: crimson
+}
+
+#second-box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  background-color: burlywood;
+  display: none;
+}
+
+.highlight {
+  text-shadow: 1px 1px white;
+  font-weight: bold;
+}
+
+#third-box {
+  display: none;
+}
+
+#color-box {
+  color: aqua;
+}
+#second-color {
+  color: chartreuse;
+}
+
+.container-color {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  color: aliceblue;
+}
+
+
+

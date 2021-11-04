@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery-Notes</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="jQuery.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jQuery link goes above the src reference for the file - jQuery goes in the head-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script> <!--this is the cdn for the underscore-->
+  <script src="jQuery.js"></script>
+</head>
+<body>
+  <h1><a href="https://api.jquery.com/category/events/" target="_blank">FOR FUll jQuery every method</a></h1>
+  <h1><a href="http://underscorejs.org/" target="_blank">For FULL underscore methods</a></h1>
+
+  <h1 id="first-h1">This is hidden until...</h1>
+  <p class="jp-class">This is the first paragraph</p>
+  <p>second</p>
+  <p>Third</p>
+
+  <div id="text-box">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sit tempora, numquam quas nisi placeat non illo similique voluptas, vel omnis repellat harum expedita explicabo voluptatibus quisquam voluptates, earum molestias?
+  </div>
+
+  <!--Handling Events-->
+
+  <div id="second-box">
+    SECOND BOX Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corrupti, esse accusantium distinctio beatae labore saepe repellat alias, magnam ex quisquam aut ipsa cum consectetur sequi optio, perferendis placeat dicta.
+  </div>
+
+  <!--Hover Effects-->
+
+  <a href="#" id="first-show">Click to show second-box</a> || <a href="#" id="first-hide">Click to hide</a>
+
+  <!--Hide/Show Events-->
+  <p class="textCopy"> HIGHLIGHT Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eum id perferendis saepe hic porro blanditiis natus nostrum quos doloremque in corporis architecto quis provident debitis quidem, modi fugit delectus.</p>
+  
+  <!--Fading-->
+  <p id="third-box">FADE Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat fugit nam facilis porro cupiditate, illo cumque, nisi consequatur, a facere animi quia totam quas mollitia vitae rem! Repellat, culpa voluptatem?</p>
+  <a href="#" id="fade-in">Press to fade in</a> || <a href="#" id="fade-out">Press to fade out</a>
+  <br />
+
+  <!--Sliding-->
+  <p id="fourth-box">SLIDE Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quae! Libero temporibus facilis consequuntur perspiciatis aliquid, totam cupiditate distinctio sint modi odio ipsam dolorum adipisci neque molestiae molestias esse necessitatibus.</p>
+  <a href="#" id="slide-up">Press to slide up</a> || <a href="#" id="slide-down">Press to slide-down</a> || <a href="#" id="toggle-slide">Press to toggle-slide</a>
+  <br />
+  
+  <!--Toggle-->
+  <a href="#" id="fourth-toggle">Press to toggle fourth</a>
+  <p id="fifth-box">TOGGLE Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quibusdam accusantium velit saepe quos, ipsum sequi impedit eligendi at odit ipsa optio reiciendis nobis molestias dolore vel ab vitae beatae!</p>
+
+  <!--Animate-->
+
+  <p id="sixth-box">ANIMATE Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore autem et voluptas, optio commodi! Id, laboriosam inventore porro laudantium odit rerum labore facilis veritatis perferendis accusantium sequi molestiae non.</p>
+
+  <button id="grow-button">Press to grow</button> || <button id="move-button">Press to Move</button> || <button id="bigger-button">Press to make bigger</button> || <button id="many-button">Press to make many</button>
+  <br/>
+  <!--Selectors-->
+  <p class="selector-text">SELECTORS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam, similique ducimus dolorum saepe numquam a rem natus molestiae corporis quas iusto ratione ipsum dolor! Perferendis consequatur voluptate saepe beatae.</p>
+  <p id="header-top">SELECTORS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam, similique ducimus dolorum saepe numquam a rem natus molestiae corporis quas iusto ratione ipsum dolor! Perferendis consequatur voluptate saepe beatae.</p>
+  <p class="green-border">SELECTORS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam, similique ducimus dolorum saepe numquam a rem natus molestiae corporis quas iusto ratione ipsum dolor! Perferendis consequatur voluptate saepe beatae.</p>
+  <br />
+  <!--Filters-->
+  <div class="container">
+    <p id="first-filter">FILTER Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam, similique ducimus dolorum saepe numquam a rem natus molestiae corporis quas iusto ratione ipsum dolor! Perferendis consequatur voluptate saepe beatae.</p>
+    <p id='second-filter'>FILTER Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam, similique ducimus dolorum saepe numquam a rem natus molestiae corporis quas iusto ratione ipsum dolor! Perferendis consequatur voluptate saepe beatae.</p>
+    <p id="third-filter">FILTER Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam, similique ducimus dolorum saepe numquam a rem natus molestiae corporis quas iusto ratione ipsum dolor! Perferendis consequatur voluptate saepe beatae.</p>
+    <p id="fourth-filter">FILTER Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam, similique ducimus dolorum saepe numquam a rem natus molestiae corporis quas iusto ratione ipsum dolor! Perferendis consequatur voluptate saepe beatae.</p>
+  </div>
+  <hr>
+  <br />
+  <!--Advanced Selectors-->
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, accusamus maiores neque magni, eligendi corrupti minus obcaecati ab ipsam qui aperiam provident perspiciatis necessitatibus facere possimus in ipsa sequi dolore!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, accusamus maiores neque magni, eligendi corrupti minus obcaecati ab ipsam qui aperiam provident perspiciatis necessitatibus facere possimus in ipsa sequi dolore!</p>
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque illo cupiditate est culpa neque veniam amet inventore eum perspiciatis doloremque, voluptatum delectus nesciunt? Autem veniam quasi tempora, illo quibusdam placeat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque illo cupiditate est culpa neque veniam amet inventore eum perspiciatis doloremque, voluptatum delectus nesciunt? Autem veniam quasi tempora, illo quibusdam placeat.</p>
+    <p id="fourth-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque illo cupiditate est culpa neque veniam amet inventore eum perspiciatis doloremque, voluptatum delectus nesciunt? Autem veniam quasi tempora, illo quibusdam placeat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque illo cupiditate est culpa neque veniam amet inventore eum perspiciatis doloremque, voluptatum delectus nesciunt? Autem veniam quasi tempora, illo quibusdam placeat.</p>
+  </div>
+  <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">Home</a></li>
+    <li><a href="">Home</a></li>
+    <li><a href="">Home</a></li>
+    <li><a href="">Home</a></li>
+  </ul>
+  <div id="selector-box">
+    <p class="last-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ab earum saepe, repellendus nisi vitae dolore sapiente commodi similique iure ipsa blanditiis iste voluptatibus sunt, maxime molestias, totam culpa officiis.</p>
+  </div>
+
+  <ul>
+    <li><a href="">Other Home</a></li>
+    <li><a href="">Other Home</a></li>
+    <li><a href="">Other Home</a></li>
+    <li><a href="">Other Home</a></li>
+    <li><a href="">Other Home</a></li>
+    <li><a href="">Other Home</a></li>
+  </ul>
+  <br/>
+  <!--Creating Content Advanced Filters-->
+
+  <div class="container">
+   <span id="first-span">first span Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perspiciatis nam, perferendis quo quam itaque aliquid. Modi sit quos odio corrupti nesciunt ut vitae omnis amet facilis cupiditate. Unde, minus?</span>
+   <span id="second-span">first span Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perspiciatis nam, perferendis quo quam itaque aliquid. Modi sit quos odio corrupti nesciunt ut vitae omnis amet facilis cupiditate. Unde, minus?</span>
+   <span id="third-span">first span Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perspiciatis nam, perferendis quo quam itaque aliquid. Modi sit quos odio corrupti nesciunt ut vitae omnis amet facilis cupiditate. Unde, minus?</span>
+   <span id="fourth-span">first span Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perspiciatis nam, perferendis quo quam itaque aliquid. Modi sit quos odio corrupti nesciunt ut vitae omnis amet facilis cupiditate. Unde, minus?</span>
+  </div>
+  <br />
+  <!--Insert Content-->
+
+  <div class="container">
+    <button id="first-append">First Append</button>
+    <button id="prepend">prepend</button>
+    <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis minus nobis quas obcaecati, similique ipsam deleniti numquam in dolorum saepe, quos, ad ex quae tempora veritatis debitis autem ut! Possimus.</p>
+    <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis minus nobis quas obcaecati, similique ipsam deleniti numquam in dolorum saepe, quos, ad ex quae tempora veritatis debitis autem ut! Possimus.</p>
+  </div>
+
+  <div id="ex1">
+    <p id="appendTo">first par</p>
+    <p id="insertBefore">second par</p>
+    <p>second par</p>
+  </div>
+
+  <!--Modifying Content-->
+  <div id="second-container">
+    <p>container p Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam omnis, vel quia doloribus assumenda nobis suscipit odio vero unde repellat perferendis porro id. Perferendis nihil incidunt fugit eos magni?</p>
+    <p>container p Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam omnis, vel quia doloribus assumenda nobis suscipit odio vero unde repellat perferendis porro id. Perferendis nihil incidunt fugit eos magni?</p>
+    <p>container p Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam omnis, vel quia doloribus assumenda nobis suscipit odio vero unde repellat perferendis porro id. Perferendis nihil incidunt fugit eos magni?</p>
+  </div>
+
+  <button id="add-class">Add Class</button>
+  <button id="remove-class">Remove Class</button>
+  <button id="toggle-class">Toggle Class</button>
+  <button id="increase-class">Increase Class</button>
+  <button id="decrease-class">Decrease Class</button>
+
+  <div id="third-container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quaerat neque, animi amet omnis nobis nesciunt magni officia tempore, quas voluptatibus porro asperiores iure quo quos quam a voluptatum deserunt?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quaerat neque, animi amet omnis nobis nesciunt magni officia tempore, quas voluptatibus porro asperiores iure quo quos quam a voluptatum deserunt?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quaerat neque, animi amet omnis nobis nesciunt magni officia tempore, quas voluptatibus porro asperiores iure quo quos quam a voluptatum deserunt?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quaerat neque, animi amet omnis nobis nesciunt magni officia tempore, quas voluptatibus porro asperiores iure quo quos quam a voluptatum deserunt?</p>
+  </div>
+
+  <!--Parents-->
+  <div class="grandparent">
+    <div class="parent">
+      <div class="child">
+        <p class="grandchild"></p>
+      </div>
+    <div class="first-godparent"></div>
+    <div class="second-godeparent"></div>
+    </div>
+  </div>
+
+  <!--Clone Elements-->
+  <div id="base-element">
+    <div>
+      <p id="clone-base">This will be cloned</p>
+    </div>
+  </div>
+
+  <!--Manipulating Element Attributes-->
+  <a href="www.google.com" id="man-att" class="manipulate">Manipulated Attribute</a>
+  <label>
+    Subscribe <input type="checkbox">
+  </label>
+
+  <!--each-->
+  <div id="each-div">
+    <p id="each-par1">First</p>
+    <p id="each-par2">Second</p>
+    <p id="each-par3">Third</p>
+  </div>
+
+  <!--map-->
+  <div id="map">
+    <p>Mapped</p>
+    <p>Mapped</p>
+    <p>Mapped</p>
+  </div>
+
+  <ul id="stinky">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>
+    <li>five</li>
+  </ul>
+
+
+
+</body>
+</html>

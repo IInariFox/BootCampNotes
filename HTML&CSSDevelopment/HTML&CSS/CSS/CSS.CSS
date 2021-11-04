@@ -1,0 +1,93 @@
+.titleName{
+  color:darkgray;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 35px;
+  text-decoration: underline;
+  text-decoration-color:whitesmoke;
+  text-align: center;
+}
+/* Cascading: from top to bottom, so the stuff at the bottom has priority, however, some tags have a higher specificity weight than other, so they take priority first */
+/* In terms of importance/priority 1. id 2. class 3. type */
+
+.topPriority{ /* This will have top priority because it is a class */
+  color: orange;
+}
+
+#midPriority{
+  color: red !important; /* !important takes absolute priority */
+}
+.finPriority{
+  color: brown;
+}
+
+#idPriority{ /* when we use an id, we use the # to call it */
+  color:purple; /* !important: used to override inline-style properties - stuff we customized in HTML */
+}
+
+.foodGrocery{
+  color:red
+}
+
+.foodProduce{
+  color:yellow
+}
+
+.dotlistColor{
+  color: black;
+}
+
+.dotlistColor span{
+  color: red;
+}
+
+.numberlistColor{
+  color:black
+}
+
+.numberlistColor span{
+  color:yellow
+}
+
+.single{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  color:white
+}
+
+.Change{
+  text-decoration-line: line-through;
+}
+
+.Mod{
+  text-decoration-line: overline; /* although they have the same intial class class (single) they differ because of the space, so we can edit */
+}
+
+.Diff{
+  text-decoration-line: none;
+}
+
+#highestS{
+  color: black;
+}
+
+#highestS.midS{ /* This gets called because it has a higher priority because we were more specific in what we wanted - id and class */
+  color:yellow; 
+}
+
+#definingRGB{
+  color:rgb(0,0,150) /* 0 is minimum and 255 for maximum */
+}
+
+#definingRGBa{
+  color:rgba(0, 0, 0,0.35) /* 0 is full transparent and 1 is filled in opaque */
+}
+
+/* 
+ 10cm; centimeters
+ 10mm; millimeters
+ 10in; inches (1in = 96px = 2.54cm)
+ 10pt; points (1pt = 1/72 of 1in)
+ 10pc; picas (1pc = 12 pt)
+ 50%; percentages are always relative to the lengths of the parent element
+ 2em; em is relative to the defined font-size of an element - if something is 14px then 1em is 14px 
+*/

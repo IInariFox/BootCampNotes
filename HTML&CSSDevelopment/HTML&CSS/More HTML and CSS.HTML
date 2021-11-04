@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="More HTML and CSS.css">
+  <title>More HTML and CSS Chapter Notes</title>
+</head>
+<body id="bgColor">
+  <header id="titleName">More HTML and CSS Notes</header>
+<p class="hoverText">Hover Example, when hovered, the text will change color!</p>
+<div id="backgroundImage"></div>
+
+<div id="gradientBG">
+  This is a gradient background!
+</div>
+
+<ol start="100"> <!--We started on 100-->
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+<ol type="A"> <!--We wanted to use A instead of 1-->
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+<ul> <!--We use dots-->
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ul>
+<ol>
+  <li>
+    Top <!--We nested a list inside of another list-->
+    <ul>
+      <li>Indent First</li>
+      <li>Indent Second</li>
+      <li>Indent Third</li>
+    </ul>
+  </li>
+  <li>Outter First</li>
+  <li>Outter Second</li>
+  <li>Outter Third</li>
+</ol>
+<ol id="listStyle"> <!--Here, we changed the list style-->
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+
+<img src= 'http://megaicons.net/static/img/icons_sizes/51/214/256/plastic-model-duck-icon.png'/> <!--img: is an inline property value-->
+<!--We took an image from online-->
+<img src="C:\Users\Admin\OneDrive\Pictures of 2021\Screenshots\img.png" alt="statistics"> <!--We took an image from our local storage - the alt helps define the image for search engines-->
+<audio src="song.mp3" autoplay controls preload="metadata">Listen to this mixtape</audio> <!--We inserted audio into the document - preload is on auto by default but will accept none, auto, and metadata-->
+<video src="video.mp4" controls poster="poster.jpg"></video><!--We inserted a video to the website-->
+<br/>
+<iframe id="googleFrame" src="https://www.google.com/maps/embed">
+</iframe>
+
+<br/>
+
+<table id="firstTable">
+  <thead> <!--We make the head of the columns with table head-->
+    <tr><!--Table row-->
+      <th>Column1</th> <!--The stuff we write in the table-->
+      <th>Column2</th>
+      <th>Column3</th>
+    </tr>
+  </thead>
+  <tbody><!--The body/info of the table-->
+    <tr>
+      <td>First row</td>
+      <td>First row</td>
+      <td>First row</td>
+    </tr>
+    <tr>
+      <td>Second Row</td>
+      <td>Second Row</td>
+      <td>Second Row</td>
+    </tr>
+  </tbody>
+  <tfoot>Footer Row Total</tfoot><!--table footer--> <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Why is my footer not aligned with the rest of my text?-->
+</table>
+
+<br/>
+
+<div id="firstForm">
+  <form action="/register" method="POST"></form> <!--action: defines the url for where the form will send the information-->
+  <!--method: defines http method the browser will use to submit the form-->
+    <p>Username</p>
+    <input type="text" name="userName"/> <!--type: allows us to input the type of information for the form will be inputted-->
+    <p>First Name</p>
+    <input type="text" name="firstName"/>
+    <p>Email</p>
+    <input type="email" name="email"/>
+    <p>Password</p>
+    <input type="password" name="password"/>
+    <p>Insert your date of birth.</p>
+    <input type="date" name="Birthday"/>
+    <p>Insert any additional information we should know about you.</p>
+    <textarea name="text" cols="25" rows="3"></textarea> <!--textarea: allows us to -->
+    <p>What is your sex?</p> <!--when making a list, it is important to use a paragraph instead of plain to or else itll print bad-->
+    <input type="radio" name="sex" value="male"> Male <!--radio: is used for single value check boxes-->
+    <input type="radio" name="sex" value="female"> Female
+    <input type="radio" name="sex" value="undefined"> Somewhere Inbetween
+    <p>What are your interests?</p>
+    <input type="checkbox" name="interests" value="technology"> Technology <!--checkbox: is meant for multiple checks-->
+    <input type="checkbox" name="interests" value="music"> Music Theory
+    <input type="checkbox" name="interests" value="games"> Video Games
+    <br/>
+    <p>Please select which state you are from:</p>
+    <select name="country"> <!--We created a drop drop select box, where they can only chose one option--> <!--If we want to give MULTIPLE options then we add MULTIPLE to the select tag at the end-->
+      <option value="Select" selected>Select a state</option> <!--selected: the default option-->
+      <option value="California">California</option>
+      <option value="Texas">Texas</option>
+      <option value="New York">New York</option>
+    </select>
+    <p>Once you're finished, you may submit</p>
+    <input type="submit" name="submission" value="Send"> <!--We created a submission-->
+    <p>This is a clickable buttom</p>
+    <button>
+      Button
+    </button>
+    <p>This is a file insert</p> <!--file insertion-->
+    <input type="file" name="file" required> <!--required: cannot submit without this text-->
+</div>
+<div id="fsDiv">
+  <form>
+    <fieldset> <!--fieldset: creates a border around a certain area like div-->
+      <legend>Login</legend> <!--legend: forms inside of fieldset-->
+      <label>
+        Email
+        <input type="email" name="email" disabled> <!--disabled: no user input-->
+      </label>
+      <label>
+        Password
+        <input type="password" name="Password" placeholder="12098312n"> <!--placeholder: a faint example in the box-->
+      </label>
+    </fieldset>
+  </form>
+</div>
+
+<div id="selAt">
+  <p data-name="John" data-features="tall">John is tall.</p>
+  <p data-name="Sam" data-features="handsome">Sam is handsome</p>
+  <p data-name="Kelly" data-features="beautiful smart">Kelly is a beaut</p>
+</div>
+</body>
+</html>
