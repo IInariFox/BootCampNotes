@@ -6,10 +6,12 @@ $(document).ready(function(){
       dataType: 'json',
       success: function (response, textStatus) {
         $('.todo-list').empty();
+        
         response.tasks.forEach(function (task) {
           $('.todo-list').append('<div class="col-xs-12 to-do ' + (task.completed ? 'complete' : '') + '"><input type="checkbox" class="mark-complete" data-id="' + task.id + '"' + (task.completed ? 'checked' : '') + '><p>' + task.content + '</p><button class="delete btn-danger" data-id="' + task.id + '"></button></div>');
         });
       },
+     
       error: function (request, textStatus, errorMessage) {
         console.log(errorMessage);
       }
@@ -100,5 +102,23 @@ m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("title").innerHTML = "To-do List: " + m + "/" + d + "/" + y;
 
+$('all-button').on('click', showAll);
+function showAll() {
+  $('all-button').toggleClass('todo-list');
+}
+$('remaining-button').on('click', showRemaining);
+function showRemaining() {
+  $('remaining-button').toggleClass('remaining');
+}
+$('completed-button').on('click', showCompleted);
+function showCompleted() {
+$('completed-button').toggleClass('mark-complete');
+}
+
+function filteredItems() {
+  $(this).addClass('active');
+  $(this).siblings().removeClass('active');
+}
+$('.filtered-div button').on('click', filteredItems);
   getAndDisplayAllTasks();
 });

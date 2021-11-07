@@ -44,7 +44,7 @@ text-decoration: underline;
   background: none;
   text-indent: 2rem;
   font-size: 40px;
-  width: 96.2%;
+  width: 94.2%;
 }
 .create-btn.btn-primary {
   border-radius: 30%;
@@ -58,5 +58,20 @@ text-decoration: underline;
   width: 15px;
   height: 15px;
 }
-
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.filtered-items {
+  margin-left: .5rem;
+  padding: .5rem 1rem;
+  background: none;
+  border: none;
+}
+.active {
+  background-color: #E6EAED; 
+  border-radius: 1.5rem;
+  color: #3C3C48;
+}
 
