@@ -1,0 +1,20 @@
+body {
+  background-color: cornflowerblue;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none; 
+  margin: 0; 
+}
+
+#current-score {
+  color: white;
+}
+#high-score {
+  color: green;
+}
+#chosen-poison {
+  animation: animate__fadeInLeftBig;
+}
