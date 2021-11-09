@@ -122,7 +122,6 @@ $('document').ready(function() {
   });
   $('#begin-game').on('keyup', function () {
     checkAnswer(Number($(this).val()), currentQuestion.answer);
-    renderNewQuestion();
   });
   renderNewQuestion();
   
