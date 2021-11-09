@@ -27,13 +27,13 @@ body {
   margin-right: auto;
 }
 #title {
-color: black;
-font-size: 55px;
-font-family: 'Times New Roman', Times, serif;
-align-items: center;
-display: flex;
-justify-content: center;
-text-decoration: underline;
+  color: black;
+  font-size: 55px;
+  font-family: 'Times New Roman', Times, serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
 }
 #task-content {
   color: black;
@@ -44,12 +44,16 @@ text-decoration: underline;
   background: none;
   text-indent: 2rem;
   font-size: 40px;
-  width: 94.2%;
+  width: 100%;
+  border: none;
 }
 .create-btn.btn-primary {
   border-radius: 30%;
+  margin-right: 5px;
+  border-radius: 10%;
+  margin-bottom: 6px;
   width: 15px;
-  height: 20px;
+  height: 15px;
 }
 .delete {
   margin-right: 5px;
