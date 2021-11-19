@@ -1,0 +1,20 @@
+body {
+  background-color: cadetblue;
+  height: 200vh;
+}
+
+.title {
+  font-size: 45px;
+  color: white;
+}
+
+.greeting {
+  font-size: 45px;
+  color: blue;
+}
+.es {
+  color: black
+}
+.de {
+  color: green;
+}
