@@ -84,3 +84,43 @@ end
 # 2
 # 4
 # 6
+
+### Encrypting and Decrypting a Message ###
+def encrypt(message)
+  result = ""
+  for i in 0..(message.length-1)
+    result += (message[i].ord + 1).chr
+  end
+  result
+end
+def decrypt(message)
+  result = ""
+  for i in 0..(message.length-1)
+    result += (message[i].ord - 1).chr
+  end
+  result
+end
+
+encrypted_message = encrypt("hello")
+puts encrypted_message
+puts decrypt(encrypted_message)
+
+### Looping an Object ###
+car = {
+  brand: "Toyota",
+  speed: 0,
+  acceleration: 2,
+  year_of_manufacture: 2017,
+  doors: 4,
+  wheels: 4,
+  seats: 4
+}
+car_values = []
+
+# Use for...in loop to push all values into car_values array.
+car.keys.each do |key|
+  car_values.push(car[key])
+end
+
+puts car_values
+# -> ["Toyota", 0, 2, 2017, 4, 4, 4]
