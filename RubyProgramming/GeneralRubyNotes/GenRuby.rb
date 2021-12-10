@@ -23,7 +23,7 @@ errors = nil # does not have a value
 ############## Working With Strings ################
 phrase = "this is a string"
 puts phrase.upcase() #upcase() - will uppercase the letters and downcase()
-puts phrase.strip() #stript() - will remove white space
+puts phrase.stript() #stript() - will remove white space
 puts phrase.length() #length() - gives length of string
 puts phrase.include? "this" #include? - true or false if something is inside of another thing
 puts phrase[0] #accesses the first letter of the string

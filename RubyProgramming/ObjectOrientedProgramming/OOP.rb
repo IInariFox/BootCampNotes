@@ -169,12 +169,33 @@ end
 class Dog < Animal
 end
 
-### Big Numbers ###
 
+### Big Numbers ###
+def addBig(num1, num2)
+  # your magic here
+  result = ""
+  leftover = 0
+
+  [num1.length, num2.length].max.times do |i|
+    total = num1.reverse[i].to_i + num2.reverse[i].to_i + leftover
+    if total >= 10
+      total -= 10
+      leftover = 1
+    else
+      leftover = 0
+    end
+    
+    result.prepend total.to_s
+  end
+  
+  result
+end
+a = "25256262652562";
+b = "8790087923478963673763168867989797";
+puts addBig(a, b) == "8790087923478963673788425130642359"
 
 
 ### Additive Persistance ###
-
 def additivePersistence(number)
   count = 0
   num = number.to_s
@@ -198,3 +219,107 @@ puts additivePersistence(2718)
 puts additivePersistence(35786)
 
 ### Triple Double ###
+def tripleDouble(num1, num2)
+  num1_s = num1.to_s
+  num2_s = num2.to_s
+  
+  for i in 0..(num1_s.length - 3) #loop through two numbers to check if one has triple duplicates and other has double duplicates
+    if num1_s[i] == num1_s[i+1] and num1_s[i] == num1_s[i+2]
+        for j in 0..(num2_s.length - 2)
+          if num1_s[i] == num2_s[j] and num2_s[j] == num2_s[j+1]
+            return true
+          end
+        end
+    end
+  end  
+  return false
+end
+
+### Prime Numbers ###
+def PrimeNumber?(number)
+  a = 2
+  while a < ( (number/2) + 1 )
+    return false if number % a === 0
+    a += 1
+  end
+  return true
+end
+
+def primeFactors(number)
+  factors = []
+  i = 2
+  
+  while number != 1
+    if PrimeNumber?(i) and number % i == 0
+      factors.push(i)
+      number = number / i
+    else
+      i = i + 1
+    end
+  end
+  
+  return factors
+end
+
+puts primeFactors(24)
+
+
+### Anagram ###
+def anagrams(str)
+  str.split('').permutation.map(&:join).uniq.sort
+  #split() - will break the string into an array of individual characters
+  #permutation.map(&:join) - will create all possible combinatations
+  #uniq - is to remove any duplicates
+  #sort - will sort the results alphabetically
+end
+
+
+
+### Tutorial Difficulty ###
+$allLevels = ['easy', 'medium', 'advanced', 'expert']
+class Course
+  attr_accessor :name, :tutorials
+  def initialize(name, tutorials)
+    # write your code here
+    @name = name
+    @tutorials = tutorials
+  end
+  def add_tutorial(tutorial)
+    # write your code here
+    for i in 0..(@tutorials.length-1)
+      if @tutorials[i] == tutorial
+        return "Tutorial level: #{tutorial.level} already exists"
+      end
+    end
+    @tutorials.push(tutorial)
+    return "Tutorial level: #{tutorial.level} added"
+  end
+  def remove_tutorial(tutorial)
+    # write your code here
+    for i in 0..(@tutorials.length-1)
+      if @tutorials[i] == tutorial
+        @tutorials.delete(tutorial)
+        return "Tutorial level: #{tutorial.level} deleted"
+      end
+    end
+    
+    return "Tutorial level: #{tutorial.level} does not exist"
+  end
+  def is_tut_harder_than?(tut1, tut2)
+    # write your code here
+    if $allLevels.index(tut1.level) > $allLevels.index(tut2.level)
+      return true
+    elsif tut1.level == tut2.level
+      return "They are the same level"
+    else
+      return false
+    end
+  end
+end
+class Tutorial
+  attr_accessor :level
+  def initialize(lvl)
+    # write your code here
+    @level = lvl
+  end
+end
